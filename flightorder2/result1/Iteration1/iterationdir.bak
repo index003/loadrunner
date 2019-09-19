@@ -1,0 +1,10 @@
+[vuser_init]
+SnapshotIndex=I1_vuser_init
+[open_index]
+SnapshotIndex=I1_open_index
+[info_flight]
+SnapshotIndex=I1_info_flight
+[submit_login]
+SnapshotIndex=I1_submit_login
+[find_flight]
+SnapshotIndex=I1_find_flight

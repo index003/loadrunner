@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-ID:\lrScript\flightorder
+-IC:\Program Files (x86)\HP\LoadRunner\include
+-ed:\lrscript\flightorder\\logfile.log
+d:\lrscript\flightorder\\combined_flightorder.c
+d:\lrscript\flightorder\\pre_cci.c

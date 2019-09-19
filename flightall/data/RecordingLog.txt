@@ -1,0 +1,109 @@
+[API Trapper      ( 50c: dd0)] Recording in 32-bit mode: C:\Program Files (x86)\Internet Explorer\iexplore.exe
+[Network Analyzer ( 50c:1244)] ------------------------------------------------------------------------------------------
+[Network Analyzer ( 50c:1244)] Load Network Traffic Analyzers:
+[Network Analyzer ( 50c:1244)]     Analyzer Module: WPLUS (value=)
+[Network Analyzer ( 50c:1244)]     Analyzer Module: WebBase (value=GetHttpProtocolAnalyzer:api_http_filter.dll)
+[Network Analyzer ( 50c:1244)]     + Network Analyzer: api_http_filter.dll @ GetHttpProtocolAnalyzer Loaded!
+[Network Analyzer ( 50c:1244)]     + Interception Auditors: WinInetWplusInterceptionAudit:api_http_filter.dll
+[Network Analyzer ( 50c:1244)]     Analyzer Module: QTWeb (value=GetWebSocketProtocolAnalyzer:WebSocketAnalyzer.dll)
+[Network Analyzer ( 50c:1244)]     + Network Analyzer: WebSocketAnalyzer.dll @ GetWebSocketProtocolAnalyzer Loaded!
+[Network Analyzer ( 50c:1244)]     Analyzer Module: local_server (value=)
+[Network Analyzer ( 50c:1244)] ------------------------------------------------------------------------------------------
+[Network Analyzer ( 50c:1238)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( 50c:1048)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( 50c:1048)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid=  1)  PROXIED!
+[Network Analyzer ( 50c: dbc)] Address lookup for conna.gj.qq.com = 180.163.32.152
+[Network Analyzer ( 50c: dbc)] Address lookup for connb.gj.qq.com = 219.133.60.246
+[Web Request      ( 50c:1238)] "GET /WebTours/index.htm"   
+[Network Analyzer ( 50c:1238)]   (Sid:  1) Client -> Server @ : 343 bytes (Service=HTTP)
+[Network Analyzer ( 50c:1238)]   (Sid:  1) Server -> Client : 664 bytes  (Service=HTTP)
+[Network Analyzer ( 50c:1214)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( 50c:12bc)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( 50c:1214)] Request Connection: Remote Server @ 101.91.63.141:443   (Service=)  (Sid=  2)  PROXIED!
+[Network Analyzer ( 50c:12bc)] Request Connection: Remote Server @ 101.91.63.141:443   (Service=)  (Sid=  3)  PROXIED!
+[Network Analyzer ( 50c:1298)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( 50c:1298)] Request Connection: Remote Server @ 180.163.32.152:80   (Service=)  (Sid=  4)  PROXIED!
+[Network Analyzer ( 50c:12cc)]   (Sid:  2) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( 50c:1340)]   (Sid:  3) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( 50c:12cc)]   (Sid:  2) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1, ciphers:AES128-SHA)
+[Network Analyzer ( 50c:1340)]   (Sid:  3) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1, ciphers:AES128-SHA)
+[Web Request      ( 50c:1238)] "POST /q.cgi"   
+[Network Analyzer ( 50c:1238)]   (Sid:  4) Client -> Server @ : 382 bytes (Service=HTTP)
+[Network Analyzer ( 50c:1238)]   (Sid:  4) Server -> Client : 290 bytes  (Service=HTTP)
+[Network Analyzer ( 50c:1238)]   (Sid:  4) Connection Terminated (by Client)
+[Network Analyzer ( 50c:1238)]   (Sid:  1) Connection Terminated (by Server)
+[Network Analyzer ( 50c:1060)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( 50c:1048)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( 50c:1048)] Request Connection: Remote Server @ 114.80.187.102:80   (Service=)  (Sid=  5)  PROXIED!
+[Network Analyzer ( 50c:1060)] Request Connection: Remote Server @ 114.80.187.102:80   (Service=)  (Sid=  6)  PROXIED!
+[Network Analyzer ( 50c:1048)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( 50c:1060)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( 50c:1048)] Request Connection: Remote Server @ 114.80.187.102:80   (Service=)  (Sid=  7)  PROXIED!
+[Network Analyzer ( 50c:1060)] Request Connection: Remote Server @ 114.80.187.102:80   (Service=)  (Sid=  8)  PROXIED!
+[Network Analyzer ( 50c:12ac)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( 50c:12ac)] Request Connection: Remote Server @ 101.91.63.141:443   (Service=)  (Sid=  9)  PROXIED!
+[Network Analyzer ( 50c:11c4)]   (Sid:  9) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( 50c:11c4)]   (Sid:  9) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1, ciphers:AES128-SHA)
+[Network Analyzer ( 50c:137c)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( 50c:137c)] Request Connection: Remote Server @ 101.91.63.141:443   (Service=)  (Sid= 10)  PROXIED!
+[Network Analyzer ( 50c: bb0)]   (Sid: 10) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( 50c: bb0)]   (Sid: 10) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1, ciphers:AES128-SHA)
+[Network Analyzer ( 50c:1060)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( 50c:1048)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( 50c:1060)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 11)  PROXIED!
+[Web Request      ( 50c:1238)] "GET /WebTours/header.html"   
+[Network Analyzer ( 50c:1238)]   (Sid: 11) Client -> Server @ : 507 bytes (Service=HTTP)
+[Network Analyzer ( 50c:1048)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 12)  PROXIED!
+[Network Analyzer ( 50c:1238)]   (Sid: 11) Server -> Client : 1008 bytes  (Service=HTTP)
+[Web Request      ( 50c:1238)] "GET /cgi-bin/welcome.pl?signOff=true"   
+[Network Analyzer ( 50c:1238)]   (Sid: 12) Client -> Server @ : 518 bytes (Service=HTTP)
+[Web Request      ( 50c:1238)] "GET /WebTours/images/hp_logo.png"   
+[Network Analyzer ( 50c:1238)]   (Sid: 11) Client -> Server @ : 405 bytes (Service=HTTP)
+[Network Analyzer ( 50c:1238)]   (Sid: 11) Server -> Client : 898 bytes  (Service=HTTP)
+[Web Request      ( 50c:1238)] "GET /WebTours/images/webtours.png"   
+[Network Analyzer ( 50c:1238)]   (Sid: 11) Client -> Server @ : 406 bytes (Service=HTTP)
+[Network Analyzer ( 50c:1238)]   (Sid: 11) Server -> Client : 4486 bytes  (Service=HTTP)
+[Network Analyzer ( 50c:1238)]   (Sid: 12) Server -> Client : 1021 bytes  (Service=HTTP)
+[Network Analyzer ( 50c:1238)]   (Sid: 12) Server -> Client : 5 bytes  (Service=HTTP)
+[Web Request      ( 50c:1238)] "GET /cgi-bin/nav.pl?in=home"   
+[Network Analyzer ( 50c:1238)]   (Sid: 11) Client -> Server @ : 550 bytes (Service=HTTP)
+[Web Request      ( 50c:1238)] "GET /WebTours/home.html"   
+[Network Analyzer ( 50c:1238)]   (Sid: 12) Client -> Server @ : 546 bytes (Service=HTTP)
+[Network Analyzer ( 50c:1238)]   (Sid: 12) Server -> Client : 1659 bytes  (Service=HTTP)
+[Network Analyzer ( 50c:1214)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( 50c:1214)] Request Connection: Remote Server @ 101.91.63.141:443   (Service=)  (Sid= 13)  PROXIED!
+[Network Analyzer ( 50c:1238)]   (Sid: 11) Server -> Client : 1747 bytes  (Service=HTTP)
+[Network Analyzer ( 50c:1238)]   (Sid: 11) Server -> Client : 5 bytes  (Service=HTTP)
+[Network Analyzer ( 50c:1398)]   (Sid: 13) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( 50c:1398)]   (Sid: 13) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1, ciphers:AES128-SHA)
+[Network Analyzer ( 50c:1214)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( 50c:1238)]   (Sid:  3) Connection Terminated (by Client)
+[Network Analyzer ( 50c:1238)]   (Sid:  9) Connection Terminated (by Client)
+[Network Analyzer ( 50c:1238)]   (Sid:  2) Connection Terminated (by Client)
+[Network Analyzer ( 50c:1238)]   (Sid: 10) Connection Terminated (by Client)
+[Network Analyzer ( 50c:1238)]   (Sid: 13) Connection Terminated (by Client)
+[Network Analyzer ( 50c:1214)] Request Connection: Remote Server @ 101.91.63.141:443   (Service=)  (Sid= 14)  PROXIED!
+[Network Analyzer ( 50c:13a0)]   (Sid: 14) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( 50c:13a0)]   (Sid: 14) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1, ciphers:AES128-SHA)
+[Web Request      ( 50c:1238)] "GET /WebTours/images/mer_login.gif"   
+[Network Analyzer ( 50c:1238)]   (Sid: 11) Client -> Server @ : 437 bytes (Service=HTTP)
+[Network Analyzer ( 50c:1238)]   (Sid: 11) Server -> Client : 976 bytes  (Service=HTTP)
+[Network Analyzer ( 50c:1214)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( 50c:1214)] Request Connection: Remote Server @ 101.91.63.141:443   (Service=)  (Sid= 15)  PROXIED!
+[Network Analyzer ( 50c:1368)]   (Sid: 15) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( 50c:1368)]   (Sid: 15) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1, ciphers:AES128-SHA)
+[Network Analyzer ( 50c:1238)]   (Sid: 14) Connection Terminated (by Client)
+[Network Analyzer ( 50c:1238)]   (Sid: 15) Connection Terminated (by Client)
+[Network Analyzer ( 50c:1214)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( 50c:1214)] Request Connection: Remote Server @ 101.91.63.141:443   (Service=)  (Sid= 16)  PROXIED!
+[Network Analyzer ( 50c:136c)]   (Sid: 16) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( 50c:136c)]   (Sid: 16) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1, ciphers:AES128-SHA)
+[Web Request      ( 50c:1238)] "GET /favicon.ico"   
+[Network Analyzer ( 50c:1238)]   (Sid: 12) Client -> Server @ : 340 bytes (Service=HTTP)
+[Network Analyzer ( 50c:1238)]   (Sid: 12) Server -> Client : 424 bytes  (Service=HTTP)
+[Network Analyzer ( 50c:1060)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( 50c:1060)] Request Connection: Remote Server @ 202.89.233.101:80   (Service=)  (Sid= 17)  PROXIED!
+[Web Request      ( 50c:1238)] "GET /favicon.ico"   
+[Network Analyzer ( 50c:1238)]   (Sid: 17) Client -> Server @ : 357 bytes (Service=HTTP)
+[Network Analyzer ( 50c:1238)]   (Sid: 17) Server -> Client : 577 bytes  (Service=HTTP)
+[Network Analyzer ( 50c:1238)]   (Sid: 16) Connection Terminated (by Client)

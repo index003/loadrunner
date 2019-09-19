@@ -1,0 +1,17 @@
+[t35]
+FileName1=t35.html
+URL1=http://conna.gj.qq.com/q.cgi
+Total=2
+RequestHeaderFile=t35_RequestHeader.txt
+RequestBodyFile=t35_RequestBody.txt
+ResponseHeaderFile=t35_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_6.xml
+FileName2=t35f1f1.htm
+URL2=http://127.0.0.1:1080/WebTours/home.html
+FrameIndex2=0.1.1
+UseFrameIndex=1
+[ProtocolInfo]
+ProtocolId=QTWeb
+[AdditionalInfo]
+IsIgnorable=1

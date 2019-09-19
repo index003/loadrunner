@@ -1,0 +1,7 @@
+POST /q.cgi HTTP/1.1
+Host: conna.gj.qq.com
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0)
+Accept: */*
+Content-Type: application/octet-stream
+Content-Length: 162
+

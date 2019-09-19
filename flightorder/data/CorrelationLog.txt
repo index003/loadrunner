@@ -1,0 +1,50 @@
+Debug Message:
+	Correlation engine instance created; using configuration Default
+
+Debug Message:
+	Rules could not be applied to http://127.0.0.1:1080/WebTours/
+
+Debug Message:
+	TaskID=399  URL=http://127.0.0.1:1080/WebTours/
+
+Debug Message:
+	Rules could not be applied to https://wup.browser.qq.com/
+
+Debug Message:
+	Rules could not be applied to \x00\x00\x00\xEC\x10\x02,<LV\x0Bqbcloudctrlf\x0CgetCloudCtrl}\x00\x01\x00\xBE\x08\x00\x01\x06\x03req\x18\x00\x01\x06\x0FQB.CloudCtrlReq\x1D\x00\x01\x00\x9D
+\x06 2a28d5a974c5f5aa416393aa1a4b4102\x16\x00& 2a28d5a974c5f5aa416393aa1a4b4102<F\x00P\x15`\x08v\x056.1.1\x80@\x90\x15\xA0\x08\xB6\x00ÌÖ\x00ìü\x0F\xF6\x10\x00\xF0\x11\xFF\xF0\x12\xFF\xF0\x13\xFF\xF6\x14\x00\xF6\x15\x00\xFC\x16\xFC\x17\xFC\x18\xF6\x19\x00\xFC\x1A\xF6\x1B\x00\xFC\x1C\xFC\x1D\xFC\x1E\xFC\x1F\xF6 \x0E6.1.7601.17514\x0BŒ˜\x0C\xA8\x0C
+
+Debug Message:
+	TaskID=408  URL=http://127.0.0.1:1080/WebTours/header.html
+
+Debug Message:
+	Rules could not be applied to https://wup.browser.qq.com/
+
+Debug Message:
+	Rules could not be applied to \x00\x00\x00\xEC\x10\x02,<LV\x0Bqbcloudctrlf\x0CgetCloudCtrl}\x00\x01\x00\xBE\x08\x00\x01\x06\x03req\x18\x00\x01\x06\x0FQB.CloudCtrlReq\x1D\x00\x01\x00\x9D
+\x06 2a28d5a974c5f5aa416393aa1a4b4102\x16\x00& 2a28d5a974c5f5aa416393aa1a4b4102<F\x00P\x12`\x08v\x056.1.1\x80@\x90\x12\xA0\x08\xB6\x00ÌÖ\x00ìü\x0F\xF6\x10\x00\xF0\x11\xFF\xF0\x12\xFF\xF0\x13\xFF\xF6\x14\x00\xF6\x15\x00\xFC\x16\xFC\x17\xFC\x18\xF6\x19\x00\xFC\x1A\xF6\x1B\x00\xFC\x1C\xFC\x1D\xFC\x1E\xFC\x1F\xF6 \x0E6.1.7601.17514\x0BŒ˜\x0C\xA8\x0C
+
+Debug Message:
+	Rules could not be applied to http://www.bing.com/favicon.ico
+
+Debug Message:
+	TaskID=422  URL=http://127.0.0.1:1080/WebTours/welcome.pl?signOff=true
+
+Debug Message:
+	TaskID=429  URL=http://127.0.0.1:1080/WebTours/home.html
+
+Debug Message:
+	TaskID=430  URL=http://127.0.0.1:1080/WebTours/nav.pl?in=home
+
+Debug Message:
+	Rules could not be applied to http://127.0.0.1:1080/WebTours/login.pl
+
+Debug Message:
+	Rules could not be applied to http://127.0.0.1:1080/WebTours/nav.pl?in=home
+
+Debug Message:
+	TaskID=443  URL=http://127.0.0.1:1080/WebTours/login.pl
+
+Debug Message:
+	TaskID=446  URL=http://127.0.0.1:1080/WebTours/nav.pl?page=menu&in=home
+

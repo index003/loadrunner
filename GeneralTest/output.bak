@@ -1,0 +1,25 @@
+Virtual User Script started at : 2019-09-17 18:43:25
+Starting action vuser_init.
+Web Turbo Replay of LoadRunner 11.0.0 for Windows 7; build 8859 (Aug 18 2010 20:14:31)  	[MsgId: MMSG-27143]
+Run Mode: HTML  	[MsgId: MMSG-26000]
+Run-Time Settings file: "D:\lrScript\GeneralTest\\default.cfg"  	[MsgId: MMSG-27141]
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Starting action Action.
+Action.c(16): #a
+Action.c(18): #a
+Action.c(28): 192.168.10.35
+Action.c(30): hello
+Action.c(46): 1
+Action.c(54): nameValue的值:AAA
+Action.c(46): 2
+Action.c(54): nameValue的值:BBB
+Action.c(46): 3
+Action.c(54): nameValue的值:CCC
+Ending action Action.
+Ending iteration 1.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.

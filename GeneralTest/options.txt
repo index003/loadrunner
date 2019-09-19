@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-ID:\lrScript\GeneralTest
+-IC:\Program Files (x86)\HP\LoadRunner\include
+-ed:\lrscript\generaltest\\logfile.log
+d:\lrscript\generaltest\\combined_GeneralTest.c
+d:\lrscript\generaltest\\pre_cci.c

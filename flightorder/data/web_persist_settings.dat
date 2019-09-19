@@ -1,0 +1,15 @@
+[StartRecordingGMT]
+StartRecordingGMT_1=2019/09/16 07:38:29
+StartRecordingIsDst_1=0
+StartRecordingGMT_2=2019/09/16 08:10:51
+StartRecordingIsDst_2=0
+StartRecordingGMT_3=2019/09/16 08:15:13
+StartRecordingIsDst_3=0
+StartRecordingGMT_4=2019/09/16 08:22:30
+StartRecordingIsDst_4=0
+[UserHomePage]
+UserHomePage=http://go.microsoft.com/fwlink/?LinkId=69157
+[User-Agent]
+User-Agent=Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0)
+[Security]
+UsingPersistForAuthentication=1

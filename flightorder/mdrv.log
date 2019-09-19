@@ -1,0 +1,47 @@
+Virtual User Script started at : 2019-09-18 17:43:02
+Starting action vuser_init.
+Web Turbo Replay of LoadRunner 11.0.0 for Windows 7; build 8859 (Aug 18 2010 20:14:31)  	[MsgId: MMSG-27143]
+Run Mode: HTML  	[MsgId: MMSG-26000]
+Run-Time Settings file: "D:\lrScript\flightorder\\default.cfg"  	[MsgId: MMSG-27141]
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Starting action open_index.
+open_index.c(4): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+open_index.c(6): Detected non-resource "http://127.0.0.1:1080/WebTours/header.html" in "http://127.0.0.1:1080/WebTours/"  	[MsgId: MMSG-26574]
+open_index.c(6): Detected non-resource "http://127.0.0.1:1080/WebTours/welcome.pl?signOff=true" in "http://127.0.0.1:1080/WebTours/"  	[MsgId: MMSG-26574]
+open_index.c(6): Found resource "http://127.0.0.1:1080/WebTours/images/hp_logo.png" in HTML "http://127.0.0.1:1080/WebTours/header.html"  	[MsgId: MMSG-26659]
+open_index.c(6): Found resource "http://127.0.0.1:1080/WebTours/images/webtours.png" in HTML "http://127.0.0.1:1080/WebTours/header.html"  	[MsgId: MMSG-26659]
+open_index.c(6): Detected non-resource "http://127.0.0.1:1080/WebTours/nav.pl?in=home" in "http://127.0.0.1:1080/WebTours/welcome.pl?signOff=true"  	[MsgId: MMSG-26574]
+open_index.c(6): Detected non-resource "http://127.0.0.1:1080/WebTours/home.html" in "http://127.0.0.1:1080/WebTours/welcome.pl?signOff=true"  	[MsgId: MMSG-26574]
+open_index.c(6): Notify: Saving Parameter "usersession = 127079.771729445zfDzzzfpHfiDDDDDDQcVQpQQtff".
+open_index.c(6): Found resource "http://127.0.0.1:1080/WebTours/images/mer_login.gif" in HTML "http://127.0.0.1:1080/WebTours/nav.pl?in=home"  	[MsgId: MMSG-26659]
+open_index.c(6): web_url("WebTours") was successful, 6448 body bytes, 1562 header bytes  	[MsgId: MMSG-26386]
+open_index.c(15): Notify: Parameter Substitution: parameter "usersession" =  "127079.771729445zfDzzzfpHfiDDDDDDQcVQpQQtff"
+open_index.c(15): usersession=127079.771729445zfDzzzfpHfiDDDDDDQcVQpQQtff
+Ending action open_index.
+Starting action submit_login.
+submit_login.c(4): Think time - Waiting 3.00 seconds (according to limit).
+submit_login.c(4): lr_think_time: 3.00 seconds (recorded think time was 7.00 seconds).
+submit_login.c(6): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+submit_login.c(8): Notify: Parameter Substitution: parameter "usersession" =  "127079.771729445zfDzzzfpHfiDDDDDDQcVQpQQtff"
+submit_login.c(8): Notify: Parameter Substitution: parameter "username" =  "jojo"
+submit_login.c(8): Detected non-resource "http://127.0.0.1:1080/WebTours/nav.pl?page=menu&in=home" in "http://127.0.0.1:1080/WebTours/login.pl"  	[MsgId: MMSG-26574]
+submit_login.c(8): Detected non-resource "http://127.0.0.1:1080/WebTours/login.pl?intro=true" in "http://127.0.0.1:1080/WebTours/login.pl"  	[MsgId: MMSG-26574]
+submit_login.c(8): Found resource "http://127.0.0.1:1080/WebTours/images/flights.gif" in HTML "http://127.0.0.1:1080/WebTours/nav.pl?page=menu&in=home"  	[MsgId: MMSG-26659]
+submit_login.c(8): Found resource "http://127.0.0.1:1080/WebTours/images/itinerary.gif" in HTML "http://127.0.0.1:1080/WebTours/nav.pl?page=menu&in=home"  	[MsgId: MMSG-26659]
+submit_login.c(8): Found resource "http://127.0.0.1:1080/WebTours/images/in_home.gif" in HTML "http://127.0.0.1:1080/WebTours/nav.pl?page=menu&in=home"  	[MsgId: MMSG-26659]
+submit_login.c(8): Found resource "http://127.0.0.1:1080/WebTours/images/signoff.gif" in HTML "http://127.0.0.1:1080/WebTours/nav.pl?page=menu&in=home"  	[MsgId: MMSG-26659]
+submit_login.c(8): Registered web_reg_find successful for "Text=welcome" (count=4)  	[MsgId: MMSG-26364]
+submit_login.c(8): Notify: Saving Parameter "loginflag = 4".
+submit_login.c(8): web_submit_data("login.pl") was successful, 5693 body bytes, 1481 header bytes  	[MsgId: MMSG-26386]
+submit_login.c(24): Notify: Parameter Substitution: parameter "loginflag" =  "4"
+submit_login.c(26): login successful!
+Ending action submit_login.
+Starting action info_flight.
+Abort was called from an action.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.
+Vuser 0 (thread 3732), ended OK."

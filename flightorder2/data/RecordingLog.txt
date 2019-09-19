@@ -1,0 +1,143 @@
+[Network Analyzer ( 894:10c4)] ------------------------------------------------------------------------------------------
+[Network Analyzer ( 894:10c4)] Load Network Traffic Analyzers:
+[Network Analyzer ( 894:10c4)]     Analyzer Module: WPLUS (value=)
+[Network Analyzer ( 894:10c4)]     Analyzer Module: WebBase (value=GetHttpProtocolAnalyzer:api_http_filter.dll)
+[Network Analyzer ( 894:10c4)]     + Network Analyzer: api_http_filter.dll @ GetHttpProtocolAnalyzer Loaded!
+[Network Analyzer ( 894:10c4)]     + Interception Auditors: WinInetWplusInterceptionAudit:api_http_filter.dll
+[Network Analyzer ( 894:10c4)]     Analyzer Module: QTWeb (value=)
+[Network Analyzer ( 894:10c4)]     Analyzer Module: local_server (value=)
+[Network Analyzer ( 894:10c4)] ------------------------------------------------------------------------------------------
+[Network Analyzer ( 894: f8c)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( 894:1220)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( 894:1220)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid=  1)  PROXIED!
+[Network Analyzer ( 894: f68)] Address lookup for conna.gj.qq.com = 180.163.32.152
+[Network Analyzer ( 894: f68)] Address lookup for connb.gj.qq.com = 219.133.60.246
+[Network Analyzer ( 894: 9f0)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( 894:12cc)] Address lookup for PC-20190621001 = 10.0.6.223
+[Web Request      ( 894: f8c)] "GET /WebTours/"   
+[Network Analyzer ( 894: f8c)]   (Sid:  1) Client -> Server : 314 bytes (Service=HTTP)
+[Network Analyzer ( 894: f8c)]   (Sid:  1) Server -> Client : 164 bytes  (Service=HTTP)
+[Network Analyzer ( 894: f8c)]   (Sid:  1) Server -> Client : 312 bytes  (Service=HTTP)
+[Network Analyzer ( 894:12cc)] Request Connection: Remote Server @ 101.91.63.141:443   (Service=)  (Sid=  2)  PROXIED!
+[Network Analyzer ( 894: 9f0)] Request Connection: Remote Server @ 101.91.63.141:443   (Service=)  (Sid=  3)  PROXIED!
+[Network Analyzer ( 894:13d4)]   (Sid:  2) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1, ciphers:DES-CBC3-SHA)
+[Network Analyzer ( 894:13d4)]   (Sid:  2) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1, ciphers:RC4-SHA)
+[Network Analyzer ( 894: a2c)]   (Sid:  3) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1, ciphers:DES-CBC3-SHA)
+[Network Analyzer ( 894: a2c)]   (Sid:  3) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1, ciphers:RC4-SHA)
+[Network Analyzer ( 894: 294)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( 894:12f0)] Address lookup for PC-20190621001 = 10.0.6.223
+[Web Request      ( 894: f8c)] "POST /"   
+[Network Analyzer ( 894: f8c)]   (Sid:  2) Client -> Server : 545 bytes (SSL)(Service=HTTP)
+[Network Analyzer ( 894: 294)] Request Connection: Remote Server @ 101.91.63.141:443   (Service=)  (Sid=  4)  PROXIED!
+[Network Analyzer ( 894: f8c)]   (Sid:  2) Server -> Client : 329 bytes (SSL) (Service=HTTP)
+[Web Request      ( 894: f8c)] "GET /WebTours/header.html"   
+[Network Analyzer ( 894: f8c)]   (Sid:  1) Client -> Server : 478 bytes (Service=HTTP)
+[Network Analyzer ( 894: f8c)]   (Sid:  1) Server -> Client : 164 bytes  (Service=HTTP)
+[Network Analyzer ( 894: ffc)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( 894:12f0)] Request Connection: Remote Server @ 101.91.63.141:443   (Service=)  (Sid=  5)  PROXIED!
+[Network Analyzer ( 894: f8c)]   (Sid:  1) Server -> Client : 692 bytes  (Service=HTTP)
+[Network Analyzer ( 894:10d4)]   (Sid:  4) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1, ciphers:DES-CBC3-SHA)
+[Network Analyzer ( 894:10d4)]   (Sid:  4) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1, ciphers:RC4-SHA)
+[Network Analyzer ( 894: fb4)]   (Sid:  5) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1, ciphers:DES-CBC3-SHA)
+[Web Request      ( 894: f8c)] "GET /WebTours/images/hp_logo.png"   
+[Network Analyzer ( 894: 4dc)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( 894: f8c)]   (Sid:  1) Client -> Server : 385 bytes (Service=HTTP)
+[Network Analyzer ( 894: ffc)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid=  6)  PROXIED!
+[Network Analyzer ( 894: fb4)]   (Sid:  5) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1, ciphers:RC4-SHA)
+[Network Analyzer ( 894: f8c)]   (Sid:  1) Server -> Client : 164 bytes  (Service=HTTP)
+[Network Analyzer ( 894: f8c)]   (Sid:  1) Server -> Client : 601 bytes  (Service=HTTP)
+[Web Request      ( 894: f8c)] "POST /"   
+[Network Analyzer ( 894: f8c)]   (Sid:  5) Client -> Server : 545 bytes (SSL)(Service=HTTP)
+[Web Request      ( 894: f8c)] "GET /WebTours/welcome.pl?signOff=true"   
+[Network Analyzer ( 894: f8c)]   (Sid:  6) Client -> Server : 490 bytes (Service=HTTP)
+[Web Request      ( 894: f8c)] "GET /WebTours/images/webtours.png"   
+[Network Analyzer ( 894: f8c)]   (Sid:  1) Client -> Server : 386 bytes (Service=HTTP)
+[Network Analyzer ( 894: f8c)]   (Sid:  1) Server -> Client : 164 bytes  (Service=HTTP)
+[Network Analyzer ( 894: f8c)]   (Sid:  1) Server -> Client : 818 bytes  (Service=HTTP)
+[Network Analyzer ( 894: f8c)]   (Sid:  5) Server -> Client : 329 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( 894: 9f0)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( 894: 4dc)] Request Connection: Remote Server @ 202.89.233.101:80   (Service=)  (Sid=  7)  PROXIED!
+[Web Request      ( 894: f8c)] "GET /favicon.ico"   
+[Network Analyzer ( 894: f8c)]   (Sid:  7) Client -> Server : 337 bytes (Service=HTTP)
+[Network Analyzer ( 894: 9f0)] Request Connection: Remote Server @ 101.91.63.141:443   (Service=)  (Sid=  8)  PROXIED!
+[Network Analyzer ( 894: f98)]   (Sid:  8) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1, ciphers:DES-CBC3-SHA)
+[Network Analyzer ( 894: f8c)]   (Sid:  7) Server -> Client : 577 bytes  (Service=HTTP)
+[Network Analyzer ( 894: f98)]   (Sid:  8) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1, ciphers:RC4-SHA)
+[Network Analyzer ( 894: f8c)]   (Sid:  6) Server -> Client : 324 bytes  (Service=HTTP)
+[Network Analyzer ( 894: f8c)]   (Sid:  6) Server -> Client : 630 bytes  (Service=HTTP)
+[Network Analyzer ( 894: f8c)]   (Sid:  3) Connection Terminated (by Client)
+[Network Analyzer ( 894: f8c)]   (Sid:  4) Connection Terminated (by Client)
+[Network Analyzer ( 894: f8c)]   (Sid:  8) Connection Terminated (by Client)
+[Network Analyzer ( 894: 9f0)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( 894: 9f0)] Request Connection: Remote Server @ 101.91.63.141:443   (Service=)  (Sid=  9)  PROXIED!
+[Network Analyzer ( 894: e98)]   (Sid:  9) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1, ciphers:DES-CBC3-SHA)
+[Network Analyzer ( 894: e98)]   (Sid:  9) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1, ciphers:RC4-SHA)
+[Web Request      ( 894: f8c)] "GET /WebTours/nav.pl?in=home"   
+[Network Analyzer ( 894: f8c)]   (Sid:  1) Client -> Server : 532 bytes (Service=HTTP)
+[Web Request      ( 894: f8c)] "GET /WebTours/home.html"   
+[Network Analyzer ( 894: f8c)]   (Sid:  6) Client -> Server : 527 bytes (Service=HTTP)
+[Network Analyzer ( 894: f8c)]   (Sid:  6) Server -> Client : 165 bytes  (Service=HTTP)
+[Network Analyzer ( 894: f8c)]   (Sid:  6) Server -> Client : 1322 bytes  (Service=HTTP)
+[Network Analyzer ( 894: f8c)]   (Sid:  1) Server -> Client : 253 bytes  (Service=HTTP)
+[Network Analyzer ( 894: f8c)]   (Sid:  1) Server -> Client : 1394 bytes  (Service=HTTP)
+[Network Analyzer ( 894: f8c)]   (Sid:  9) Connection Terminated (by Client)
+[Network Analyzer ( 894: 9f0)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( 894: 9f0)] Request Connection: Remote Server @ 101.91.63.141:443   (Service=)  (Sid= 10)  PROXIED!
+[Network Analyzer ( 894: cd0)]   (Sid: 10) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1, ciphers:DES-CBC3-SHA)
+[Network Analyzer ( 894: cd0)]   (Sid: 10) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1, ciphers:RC4-SHA)
+[Network Analyzer ( 894: 9f0)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( 894: 9f0)] Request Connection: Remote Server @ 101.91.63.141:443   (Service=)  (Sid= 11)  PROXIED!
+[Network Analyzer ( 894: 7a8)]   (Sid: 11) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1, ciphers:DES-CBC3-SHA)
+[Network Analyzer ( 894: 7a8)]   (Sid: 11) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1, ciphers:RC4-SHA)
+[Web Request      ( 894: f8c)] "GET /WebTours/images/mer_login.gif"   
+[Network Analyzer ( 894: f8c)]   (Sid:  6) Client -> Server : 418 bytes (Service=HTTP)
+[Network Analyzer ( 894: f8c)]   (Sid:  6) Server -> Client : 164 bytes  (Service=HTTP)
+[Network Analyzer ( 894: f8c)]   (Sid:  6) Server -> Client : 679 bytes  (Service=HTTP)
+[Web Request      ( 894: f8c)] "GET /favicon.ico"   
+[Network Analyzer ( 894: f8c)]   (Sid:  1) Client -> Server : 320 bytes (Service=HTTP)
+[Network Analyzer ( 894: f8c)]   (Sid:  1) Server -> Client : 258 bytes  (Service=HTTP)
+[Network Analyzer ( 894: f8c)]   (Sid:  1) Connection Terminated (by Server)
+[Network Analyzer ( 894: f8c)]   (Sid: 10) Connection Terminated (by Client)
+[Network Analyzer ( 894: f8c)]   (Sid: 11) Connection Terminated (by Client)
+[Web Request      ( 894: f8c)] "POST /WebTours/login.pl"   
+[Network Analyzer ( 894: f8c)]   (Sid:  6) Client -> Server : 734 bytes (Service=HTTP)
+[Network Analyzer ( 894: f8c)]   (Sid:  6) Server -> Client : 347 bytes  (Service=HTTP)
+[Network Analyzer ( 894: f8c)]   (Sid:  6) Server -> Client : 437 bytes  (Service=HTTP)
+[Web Request      ( 894: f8c)] "GET /WebTours/nav.pl?page=menu&in=home"   
+[Network Analyzer ( 894: f8c)]   (Sid:  6) Client -> Server : 629 bytes (Service=HTTP)
+[Network Analyzer ( 894:1220)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( 894:1220)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 12)  PROXIED!
+[Network Analyzer ( 894: f8c)]   (Sid:  6) Server -> Client : 253 bytes  (Service=HTTP)
+[Network Analyzer ( 894: f8c)]   (Sid:  6) Server -> Client : 1446 bytes  (Service=HTTP)
+[Web Request      ( 894: f8c)] "GET /WebTours/login.pl?intro=true"   
+[Network Analyzer ( 894: f8c)]   (Sid: 12) Client -> Server : 624 bytes (Service=HTTP)
+[Web Request      ( 894: f8c)] "GET /WebTours/images/flights.gif"   
+[Network Analyzer ( 894:1220)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( 894: 4dc)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( 894: f8c)]   (Sid:  6) Client -> Server : 528 bytes (Service=HTTP)
+[Network Analyzer ( 894: f8c)]   (Sid:  6) Server -> Client : 164 bytes  (Service=HTTP)
+[Network Analyzer ( 894: f8c)]   (Sid:  6) Server -> Client : 726 bytes  (Service=HTTP)
+[Web Request      ( 894: f8c)] "GET /WebTours/images/in_home.gif"   
+[Network Analyzer ( 894: f8c)]   (Sid:  6) Client -> Server : 528 bytes (Service=HTTP)
+[Network Analyzer ( 894: f8c)]   (Sid:  6) Server -> Client : 852 bytes  (Service=HTTP)
+[Network Analyzer ( 894:1220)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 13)  PROXIED!
+[Web Request      ( 894: f8c)] "GET /WebTours/images/itinerary.gif"   
+[Network Analyzer ( 894: f8c)]   (Sid: 13) Client -> Server : 530 bytes (Service=HTTP)
+[Network Analyzer ( 894: f8c)]   (Sid: 13) Server -> Client : 897 bytes  (Service=HTTP)
+[Network Analyzer ( 894: 4dc)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 14)  PROXIED!
+[Network Analyzer ( 894: f8c)]   (Sid: 12) Server -> Client : 225 bytes  (Service=HTTP)
+[Network Analyzer ( 894: f8c)]   (Sid: 12) Server -> Client : 912 bytes  (Service=HTTP)
+[Web Request      ( 894: f8c)] "GET /WebTours/images/signoff.gif"   
+[Network Analyzer ( 894: f8c)]   (Sid: 14) Client -> Server : 528 bytes (Service=HTTP)
+[Network Analyzer ( 894: f8c)]   (Sid: 14) Server -> Client : 164 bytes  (Service=HTTP)
+[Network Analyzer ( 894: 9f0)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( 894: f8c)]   (Sid: 14) Server -> Client : 751 bytes  (Service=HTTP)
+[Network Analyzer ( 894: 9f0)] Request Connection: Remote Server @ 101.91.63.141:443   (Service=)  (Sid= 15)  PROXIED!
+[Network Analyzer ( 894:115c)]   (Sid: 15) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1, ciphers:DES-CBC3-SHA)
+[Network Analyzer ( 894:115c)]   (Sid: 15) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1, ciphers:RC4-SHA)
+[Network Analyzer ( 894: f8c)]   (Sid: 15) Connection Terminated (by Client)
+[Network Analyzer ( 894: 9f0)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( 894: 9f0)] Request Connection: Remote Server @ 101.91.63.141:443   (Service=)  (Sid= 16)  PROXIED!
+[Network Analyzer ( 894:13d8)]   (Sid: 16) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1, ciphers:DES-CBC3-SHA)
+[Network Analyzer ( 894:13d8)]   (Sid: 16) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1, ciphers:RC4-SHA)
+[Network Analyzer ( 894: f8c)]   (Sid: 16) Connection Terminated (by Client)

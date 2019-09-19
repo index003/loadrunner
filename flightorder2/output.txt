@@ -1,0 +1,80 @@
+Virtual User Script started at : 2019-09-18 11:51:12
+Starting action vuser_init.
+Web Turbo Replay of LoadRunner 11.0.0 for Windows 7; build 8859 (Aug 18 2010 20:14:31)  	[MsgId: MMSG-27143]
+Run Mode: HTML  	[MsgId: MMSG-26000]
+Run-Time Settings file: "D:\lrScript\flightorder2\\default.cfg"  	[MsgId: MMSG-27141]
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Starting action open_index.
+open_index.c(4): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+open_index.c(6): Detected non-resource "http://127.0.0.1:1080/WebTours/header.html" in "http://127.0.0.1:1080/WebTours/"  	[MsgId: MMSG-26574]
+open_index.c(6): Detected non-resource "http://127.0.0.1:1080/WebTours/welcome.pl?signOff=true" in "http://127.0.0.1:1080/WebTours/"  	[MsgId: MMSG-26574]
+open_index.c(6): Found resource "http://127.0.0.1:1080/WebTours/images/hp_logo.png" in HTML "http://127.0.0.1:1080/WebTours/header.html"  	[MsgId: MMSG-26659]
+open_index.c(6): Found resource "http://127.0.0.1:1080/WebTours/images/webtours.png" in HTML "http://127.0.0.1:1080/WebTours/header.html"  	[MsgId: MMSG-26659]
+open_index.c(6): Detected non-resource "http://127.0.0.1:1080/WebTours/nav.pl?in=home" in "http://127.0.0.1:1080/WebTours/welcome.pl?signOff=true"  	[MsgId: MMSG-26574]
+open_index.c(6): Detected non-resource "http://127.0.0.1:1080/WebTours/home.html" in "http://127.0.0.1:1080/WebTours/welcome.pl?signOff=true"  	[MsgId: MMSG-26574]
+open_index.c(6): Notify: Saving Parameter "usersession = 127078.061725395zfDzfHHpiDQcVQptzzi".
+open_index.c(6): Found resource "http://127.0.0.1:1080/WebTours/images/mer_login.gif" in HTML "http://127.0.0.1:1080/WebTours/nav.pl?in=home"  	[MsgId: MMSG-26659]
+open_index.c(6): web_url("WebTours") was successful, 6440 body bytes, 1562 header bytes  	[MsgId: MMSG-26386]
+open_index.c(15): Notify: Parameter Substitution: parameter "usersession" =  "127078.061725395zfDzfHHpiDQcVQptzzi"
+open_index.c(15): usersession=127078.061725395zfDzfHHpiDQcVQptzzi
+Ending action open_index.
+Starting action submit_login.
+submit_login.c(6): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+submit_login.c(8): Notify: Parameter Substitution: parameter "usersession" =  "127078.061725395zfDzfHHpiDQcVQptzzi"
+submit_login.c(8): Notify: Parameter Substitution: parameter "username" =  "jojo"
+submit_login.c(8): Detected non-resource "http://127.0.0.1:1080/WebTours/nav.pl?page=menu&in=home" in "http://127.0.0.1:1080/WebTours/login.pl"  	[MsgId: MMSG-26574]
+submit_login.c(8): Detected non-resource "http://127.0.0.1:1080/WebTours/login.pl?intro=true" in "http://127.0.0.1:1080/WebTours/login.pl"  	[MsgId: MMSG-26574]
+submit_login.c(8): Found resource "http://127.0.0.1:1080/WebTours/images/flights.gif" in HTML "http://127.0.0.1:1080/WebTours/nav.pl?page=menu&in=home"  	[MsgId: MMSG-26659]
+submit_login.c(8): Found resource "http://127.0.0.1:1080/WebTours/images/itinerary.gif" in HTML "http://127.0.0.1:1080/WebTours/nav.pl?page=menu&in=home"  	[MsgId: MMSG-26659]
+submit_login.c(8): Found resource "http://127.0.0.1:1080/WebTours/images/in_home.gif" in HTML "http://127.0.0.1:1080/WebTours/nav.pl?page=menu&in=home"  	[MsgId: MMSG-26659]
+submit_login.c(8): Found resource "http://127.0.0.1:1080/WebTours/images/signoff.gif" in HTML "http://127.0.0.1:1080/WebTours/nav.pl?page=menu&in=home"  	[MsgId: MMSG-26659]
+submit_login.c(8): Registered web_reg_find successful for "Text=welcome" (count=4)  	[MsgId: MMSG-26364]
+submit_login.c(8): Notify: Saving Parameter "loginflag = 4".
+submit_login.c(8): web_submit_data("login.pl") was successful, 5693 body bytes, 1481 header bytes  	[MsgId: MMSG-26386]
+submit_login.c(24): Notify: Parameter Substitution: parameter "loginflag" =  "4"
+submit_login.c(26): login successful!
+Ending action submit_login.
+Starting action info_flight.
+info_flight.c(3): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+info_flight.c(9): Detected non-resource "http://127.0.0.1:1080/WebTours/nav.pl?page=menu&in=flights" in "http://127.0.0.1:1080/WebTours/welcome.pl?page=search"  	[MsgId: MMSG-26574]
+info_flight.c(9): Detected non-resource "http://127.0.0.1:1080/WebTours/reservations.pl?page=welcome" in "http://127.0.0.1:1080/WebTours/welcome.pl?page=search"  	[MsgId: MMSG-26574]
+info_flight.c(9): Notify: Saving Parameter "flights_1 = Denver".
+info_flight.c(9): Notify: Saving Parameter "flights_2 = Frankfurt".
+info_flight.c(9): Notify: Saving Parameter "flights_3 = London".
+info_flight.c(9): Notify: Saving Parameter "flights_4 = Los Angeles".
+info_flight.c(9): Notify: Saving Parameter "flights_5 = Paris".
+info_flight.c(9): Notify: Saving Parameter "flights_6 = Portland".
+info_flight.c(9): Notify: Saving Parameter "flights_7 = San Francisco".
+info_flight.c(9): Notify: Saving Parameter "flights_8 = Seattle".
+info_flight.c(9): Notify: Saving Parameter "flights_9 = Sydney".
+info_flight.c(9): Notify: Saving Parameter "flights_10 = Zurich".
+info_flight.c(9): Notify: Saving Parameter "flights_11 = Denver".
+info_flight.c(9): Notify: Saving Parameter "flights_12 = Frankfurt".
+info_flight.c(9): Notify: Saving Parameter "flights_13 = London".
+info_flight.c(9): Notify: Saving Parameter "flights_14 = Los Angeles".
+info_flight.c(9): Notify: Saving Parameter "flights_15 = Paris".
+info_flight.c(9): Notify: Saving Parameter "flights_16 = Portland".
+info_flight.c(9): Notify: Saving Parameter "flights_17 = San Francisco".
+info_flight.c(9): Notify: Saving Parameter "flights_18 = Seattle".
+info_flight.c(9): Notify: Saving Parameter "flights_19 = Sydney".
+info_flight.c(9): Notify: Saving Parameter "flights_20 = Zurich".
+info_flight.c(9): Found resource "http://127.0.0.1:1080/WebTours/images/button_next.gif" in HTML "http://127.0.0.1:1080/WebTours/reservations.pl?page=welcome"  	[MsgId: MMSG-26659]
+info_flight.c(9): Found resource "http://127.0.0.1:1080/WebTours/images/in_flights.gif" in HTML "http://127.0.0.1:1080/WebTours/nav.pl?page=menu&in=flights"  	[MsgId: MMSG-26659]
+info_flight.c(9): Resource "http://127.0.0.1:1080/WebTours/images/itinerary.gif" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+info_flight.c(9): Found resource "http://127.0.0.1:1080/WebTours/images/home.gif" in HTML "http://127.0.0.1:1080/WebTours/nav.pl?page=menu&in=flights"  	[MsgId: MMSG-26659]
+info_flight.c(9): Resource "http://127.0.0.1:1080/WebTours/images/signoff.gif" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+info_flight.c(9): Notify: Saving Parameter "flights_count = 20".
+info_flight.c(9): web_url("welcome.pl") was successful, 8360 body bytes, 1173 header bytes  	[MsgId: MMSG-26386]
+Ending action info_flight.
+Starting action find_flight.
+find_flight.c(12): Notify: Parameter Substitution: parameter "flights_count" =  "20"
+find_flight.c(14): flightcount=20
+find_flight.c(18): 当前城市编号是：flights_7
+find_flight.c(19): 第7个城市:flights_7
+Abort was called from an action.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.

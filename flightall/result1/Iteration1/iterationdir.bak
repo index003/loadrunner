@@ -1,0 +1,16 @@
+[find_flight]
+SnapshotIndex=I1_find_flight
+[submit_login]
+SnapshotIndex=I1_submit_login
+[info_flight]
+SnapshotIndex=I1_info_flight
+[sign_off]
+SnapshotIndex=I1_sign_off
+[pay_flight]
+SnapshotIndex=I1_pay_flight
+[vuser_init]
+SnapshotIndex=I1_vuser_init
+[open_index]
+SnapshotIndex=I1_open_index
+[select_flight]
+SnapshotIndex=I1_select_flight

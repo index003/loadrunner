@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-ID:\lrScript\flightsAdd
+-ID:\Program Files (x86)\HP\LoadRunner\include
+-ed:\lrscript\flightsadd\\logfile.log
+d:\lrscript\flightsadd\\combined_flightsAdd.c
+d:\lrscript\flightsadd\\pre_cci.c
