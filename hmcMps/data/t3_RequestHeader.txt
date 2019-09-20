@@ -1,0 +1,10 @@
+POST / HTTP/1.1
+Q-GUID: 2a28d5a974c5f5aa416393aa1a4b4102
+Q-UA: PCQB80_GA/800000&NA/NA&PC&NA&NA&NA&9008&NA&V3
+x-tx-host: wup.html5.qq.com
+QQ-R-ZIP: gzip
+User-Agent: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1) QQBrowser/6.0
+Host: wup.browser.qq.com
+Content-Length: 236
+Cache-Control: no-cache
+

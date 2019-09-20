@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-ID:\lrScript\hmcMps
+-ID:\Program Files (x86)\HP\LoadRunner\include
+-ed:\lrscript\hmcmps\\logfile.log
+d:\lrscript\hmcmps\\combined_hmcMps.c
+d:\lrscript\hmcmps\\pre_cci.c

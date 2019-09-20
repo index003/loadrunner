@@ -1,0 +1,15 @@
+[t7]
+FileName1=t7.htm
+URL1=http://mps-test.haomaiche.com/fs/fs/fsEmploy.do?method=validateSmCode&phone=17765161670&code=041713
+Total=3
+RequestHeaderFile=t7_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t7_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_7.xml
+FileName2=t7_panel_tools.png
+URL2=http://mps-test.haomaiche.com/resources/js/easyui-1.3.2/themes/default/images/panel_tools.png
+FileName3=t7_blank.gif
+URL3=http://mps-test.haomaiche.com/resources/js/easyui-1.3.2/themes/default/images/blank.gif
+[ProtocolInfo]
+ProtocolId=QTWeb

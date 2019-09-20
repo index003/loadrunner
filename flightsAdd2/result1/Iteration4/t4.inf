@@ -1,0 +1,17 @@
+[t4]
+URL3=http://127.0.0.1:1080/cgi-bin/reservations.pl
+SnapshotXmlFile=snapshot_4.xml
+ContentType=text/html
+StepName=Submit Form: reservations.pl
+Total=3
+FileName1=t3.html
+FileName3=t4f1.html
+FileName2=t3f0.html
+RequestHeaderFile=t4_RequestHeader.txt
+UseFrameIndex=1
+ResponseHeaderFile=t4_ResponseHeader.txt
+FrameIndex2=0.0
+FrameIndex3=0.1
+RequestBodyFile=t4_RequestBody.txt
+URL1=http://127.0.0.1:1080/cgi-bin/welcome.pl?page=search
+URL2=http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=flights

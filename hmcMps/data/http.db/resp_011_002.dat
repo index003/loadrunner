@@ -1,0 +1,34 @@
+var capital=false;
+var divTip;
+var detectCapsLock = function(event,_this) {
+	if (capital) {
+		return ;
+	}
+	var e = event || window.event;
+	var keyCode = e.keyCode || e.which; // 按键的keyCode
+	var isShift = e.shiftKey || (keyCode == 16) || false; // shift键是否按住
+	if (((keyCode >= 65 && keyCode <= 90) && !isShift) // Caps Lock打开，且没有按住shift键
+			|| ((keyCode >= 97 && keyCode <= 122) && isShift)// Caps Lock  打开，且按住shift键
+	 ){
+		capital = true
+		if(divTip==null||divTip.length<0){
+			$("body").append("<div id='divTip__985124855558842555' style='width:200px; height:15px; padding-top:3px; display:none; position:absolute; z-index:9999999999999; text-align:left; color:black; font-size:12px; border:solid 0px #DBC492; border-bottom-color:#B49366; border-right-color:#B49366;'>大写锁定键已开启，请注意大小写。</div>");
+			divTip = $("#divTip__985124855558842555");
+		}
+		var offset = _this.offset();  
+        divTip.css("left", offset.left + "px");
+        divTip.css("top", offset.top + _this[0].offsetHeight + 2 + "px");
+        divTip.show();
+	} else {
+		if(divTip!=null){
+			divTip.hide();
+		}
+	}
+}
+var capsLockUp = function(event) {
+	var e = event || window.event;
+	if (e.keyCode == 20 && capital) {
+		capital=!capital;
+		divTip.toggle();
+	}
+}

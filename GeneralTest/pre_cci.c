@@ -1,5 +1,5 @@
 # 1 "d:\\lrscript\\generaltest\\\\combined_GeneralTest.c"
-# 1 "C:\\Program Files (x86)\\HP\\LoadRunner\\include/lrun.h" 1
+# 1 "D:\\Program Files (x86)\\HP\\LoadRunner\\include/lrun.h" 1
  
  
 
@@ -26,7 +26,7 @@
 
 
 
-# 103 "C:\\Program Files (x86)\\HP\\LoadRunner\\include/lrun.h"
+# 103 "D:\\Program Files (x86)\\HP\\LoadRunner\\include/lrun.h"
 
 
 
@@ -120,6 +120,7 @@
 
 
 
+
  
  
  
@@ -150,12 +151,14 @@
 int     lr_start_transaction   (char * transaction_name);
 int lr_start_sub_transaction          (char * transaction_name, char * trans_parent);
 long lr_start_transaction_instance    (char * transaction_name, long parent_handle);
+int   lr_start_cross_vuser_transaction		(char * transaction_name, char * trans_id_param); 
 
 
 
 int     lr_end_transaction     (char * transaction_name, int status);
 int lr_end_sub_transaction            (char * transaction_name, int status);
 int lr_end_transaction_instance       (long transaction, int status);
+int   lr_end_cross_vuser_transaction	(char * transaction_name, char * trans_id_param, int status);
 
 
  
@@ -178,7 +181,7 @@ int lr_generate_uuid_free(lr_uuid_t uuid);
 int lr_generate_uuid_on_buf(lr_uuid_t buf);
 
    
-# 263 "C:\\Program Files (x86)\\HP\\LoadRunner\\include/lrun.h"
+# 266 "D:\\Program Files (x86)\\HP\\LoadRunner\\include/lrun.h"
 int lr_start_distributed_transaction  (char * transaction_name, lr_uuid_t correlator, long timeout  );
 
    
@@ -418,11 +421,11 @@ int   lr_msg (char * fmt, ...);
 int   lr_debug_message (unsigned int msg_class,
 									    char * format,
 										...);
-# 502 "C:\\Program Files (x86)\\HP\\LoadRunner\\include/lrun.h"
+# 505 "D:\\Program Files (x86)\\HP\\LoadRunner\\include/lrun.h"
 void   lr_new_prefix (int type,
                                  char * filename,
                                  int line);
-# 505 "C:\\Program Files (x86)\\HP\\LoadRunner\\include/lrun.h"
+# 508 "D:\\Program Files (x86)\\HP\\LoadRunner\\include/lrun.h"
 int   lr_log_message (char * fmt, ...);
 int   lr_message (char * fmt, ...);
 int   lr_error_message (char * fmt, ...);
@@ -436,7 +439,7 @@ int   lr_fail_trans_with_error (char * fmt, ...);
  
  
  
-# 528 "C:\\Program Files (x86)\\HP\\LoadRunner\\include/lrun.h"
+# 532 "D:\\Program Files (x86)\\HP\\LoadRunner\\include/lrun.h"
 
  
  
@@ -471,7 +474,7 @@ int   lr_eval_string_ext (const char *in_str,
                                      unsigned long const options,
                                      const char *file,
 								     long const line);
-# 562 "C:\\Program Files (x86)\\HP\\LoadRunner\\include/lrun.h"
+# 566 "D:\\Program Files (x86)\\HP\\LoadRunner\\include/lrun.h"
 void   lr_eval_string_ext_free (char * * pstr);
 
  
@@ -495,7 +498,7 @@ void   lr_eval_string_ext_free (char * * pstr);
  
 int lr_param_increment (char * dst_name,
                               char * src_name);
-# 585 "C:\\Program Files (x86)\\HP\\LoadRunner\\include/lrun.h"
+# 589 "D:\\Program Files (x86)\\HP\\LoadRunner\\include/lrun.h"
 
 
 
@@ -520,11 +523,23 @@ int	  lr_save_var (char *              param_val,
 							  unsigned long const param_val_len,
 							  unsigned long const options,
 							  char *			  param_name);
-# 609 "C:\\Program Files (x86)\\HP\\LoadRunner\\include/lrun.h"
+# 613 "D:\\Program Files (x86)\\HP\\LoadRunner\\include/lrun.h"
 int   lr_save_string (const char * param_val, const char * param_name);
+
+
+
+int   lr_set_custom_error_message (const char * param_val, ...);
+
+int   lr_remove_custom_error_message ();
+
+
 int   lr_free_parameter (const char * param_name);
 int   lr_save_int (const int param_val, const char * param_name);
+int   lr_save_timestamp (const char * tmstampParam, ...);
+int   lr_save_param_regexp (const char *bufferToScan, unsigned int bufSize, ...);
 
+int   lr_convert_double_to_integer (const char *source_param_name, const char * target_param_name);
+int   lr_convert_double_to_double (const char *source_param_name, const char *format_string, const char * target_param_name);
 
  
  
@@ -532,7 +547,7 @@ int   lr_save_int (const int param_val, const char * param_name);
  
  
  
-# 676 "C:\\Program Files (x86)\\HP\\LoadRunner\\include/lrun.h"
+# 692 "D:\\Program Files (x86)\\HP\\LoadRunner\\include/lrun.h"
 void   lr_save_datetime (const char *format, int offset, const char *name);
 
 
@@ -594,10 +609,17 @@ char * lr_table_get_cell_by_col_name (char * param_name, int row, const char* co
 int lr_table_get_column_name_by_index (char * param_name, int col, 
 											char * * const col_name,
 											int * col_name_len);
-# 737 "C:\\Program Files (x86)\\HP\\LoadRunner\\include/lrun.h"
+# 753 "D:\\Program Files (x86)\\HP\\LoadRunner\\include/lrun.h"
 
 int lr_table_get_column_name_by_index_free (char * col_name);
 
+ 
+ 
+ 
+ 
+# 768 "D:\\Program Files (x86)\\HP\\LoadRunner\\include/lrun.h"
+int   lr_zip (const char* param1, const char* param2);
+int   lr_unzip (const char* param1, const char* param2);
 
  
  
@@ -620,12 +642,12 @@ int   lr_param_substit (char * file,
                                    int const in_len,
                                    char * * const out_str,
                                    int * const out_len);
-# 762 "C:\\Program Files (x86)\\HP\\LoadRunner\\include/lrun.h"
+# 792 "D:\\Program Files (x86)\\HP\\LoadRunner\\include/lrun.h"
 void   lr_param_substit_free (char * * pstr);
 
 
  
-# 774 "C:\\Program Files (x86)\\HP\\LoadRunner\\include/lrun.h"
+# 804 "D:\\Program Files (x86)\\HP\\LoadRunner\\include/lrun.h"
 
 
 
@@ -634,16 +656,31 @@ void   lr_param_substit_free (char * * pstr);
 char *   lrfnc_eval_string (char * str,
                                       char * file_name,
                                       long const line_num);
-# 782 "C:\\Program Files (x86)\\HP\\LoadRunner\\include/lrun.h"
+# 812 "D:\\Program Files (x86)\\HP\\LoadRunner\\include/lrun.h"
 
 
 int   lrfnc_save_string ( const char * param_val,
                                      const char * param_name,
                                      const char * file_name,
                                      long const line_num);
-# 788 "C:\\Program Files (x86)\\HP\\LoadRunner\\include/lrun.h"
+# 818 "D:\\Program Files (x86)\\HP\\LoadRunner\\include/lrun.h"
 
 int   lrfnc_free_parameter (const char * param_name );
+
+
+
+
+
+
+
+typedef struct _lr_timestamp_param
+{
+	int iDigits;
+}lr_timestamp_param;
+
+extern const lr_timestamp_param default_timestamp_param;
+
+int   lrfnc_save_timestamp (const char * param_name, const lr_timestamp_param* time_param);
 
 int lr_save_searched_string(char *buffer, long buf_size, unsigned int occurrence,
 			    char *search_string, int offset, unsigned int param_val_len, 
@@ -653,7 +690,7 @@ int lr_save_searched_string(char *buffer, long buf_size, unsigned int occurrence
 char *   lr_string (char * str);
 
  
-# 859 "C:\\Program Files (x86)\\HP\\LoadRunner\\include/lrun.h"
+# 916 "D:\\Program Files (x86)\\HP\\LoadRunner\\include/lrun.h"
 
 int   lr_save_value (char * param_val,
                                 unsigned long const param_val_len,
@@ -661,7 +698,7 @@ int   lr_save_value (char * param_val,
                                 char * param_name,
                                 char * file_name,
                                 long const line_num);
-# 866 "C:\\Program Files (x86)\\HP\\LoadRunner\\include/lrun.h"
+# 923 "D:\\Program Files (x86)\\HP\\LoadRunner\\include/lrun.h"
 
 
  
@@ -684,7 +721,7 @@ int   lr_printf (char * fmt, ...);
  
 int   lr_set_debug_message (unsigned int msg_class,
                                        unsigned int swtch);
-# 888 "C:\\Program Files (x86)\\HP\\LoadRunner\\include/lrun.h"
+# 945 "D:\\Program Files (x86)\\HP\\LoadRunner\\include/lrun.h"
 unsigned int   lr_get_debug_message (void);
 
 
@@ -714,7 +751,7 @@ int *   lr_localtime (long offset);
 int   lr_send_port (long port);
 
 
-# 964 "C:\\Program Files (x86)\\HP\\LoadRunner\\include/lrun.h"
+# 1021 "D:\\Program Files (x86)\\HP\\LoadRunner\\include/lrun.h"
 
 
 
@@ -732,10 +769,10 @@ void vuser_declaration (void);
 
 
 
-# 993 "C:\\Program Files (x86)\\HP\\LoadRunner\\include/lrun.h"
+# 1050 "D:\\Program Files (x86)\\HP\\LoadRunner\\include/lrun.h"
 
 
-# 1005 "C:\\Program Files (x86)\\HP\\LoadRunner\\include/lrun.h"
+# 1062 "D:\\Program Files (x86)\\HP\\LoadRunner\\include/lrun.h"
 
 
 
@@ -787,6 +824,61 @@ int   _lr_declare_rendezvous  (char * rendezvous_name);
  
  
 
+
+int vtc_connect(char * servername, int portnum, int options);
+int vtc_disconnect(int pvci);
+int vtc_get_last_error(int pvci);
+int vtc_query_column(int pvci, char * columnName, int columnIndex, char * *outvalue);
+int vtc_query_row(int pvci, int rowIndex, char * **outcolumns, char * **outvalues);
+int vtc_send_message(int pvci, char * column, char * message, unsigned short *outRc);
+int vtc_send_if_unique(int pvci, char * column, char * message, unsigned short *outRc);
+int vtc_send_row1(int pvci, char * columnNames, char * messages, char * delimiter, unsigned char sendflag, unsigned short *outUpdates);
+int vtc_update_message(int pvci, char * column, int index , char * message, unsigned short *outRc);
+int vtc_update_message_ifequals(int pvci, char	*columnName, int index,	char * message, char	*ifmessage,	unsigned short 	*outRc);
+int vtc_update_row1(int pvci, char * columnNames, int index , char * messages, char * delimiter, unsigned short *outUpdates);
+int vtc_retrieve_message(int pvci, char * column, char * *outvalue);
+int vtc_retrieve_messages1(int pvci, char * columnNames, char * delimiter, char * **outvalues);
+int vtc_retrieve_row(int pvci, char * **outcolumns, char * **outvalues);
+int vtc_increment(int pvci, char * column, int index , int incrValue, int *outValue);
+int vtc_clear_message(int pvci, char * column, int index , unsigned short *outRc);
+int vtc_clear_column(int pvci, char * column, unsigned short *outRc);
+int vtc_ensure_index(int pvci, char * column, unsigned short *outRc);
+int vtc_drop_index(int pvci, char * column, unsigned short *outRc);
+int vtc_clear_row(int pvci, int rowIndex, unsigned short *outRc);
+int vtc_create_column(int pvci, char * column,unsigned short *outRc);
+int vtc_column_size(int pvci, char * column, int *size);
+void vtc_free(char * msg);
+void vtc_free_list(char * *msglist);
+int lrvtc_connect(char * servername, int portnum, int options);
+int lrvtc_disconnect();
+int lrvtc_query_column(char * columnName, int columnIndex);
+int lrvtc_query_row(int columnIndex);
+int lrvtc_send_message(char * columnName, char * message);
+int lrvtc_send_if_unique(char * columnName, char * message);
+int lrvtc_send_row1(char * columnNames, char * messages, char * delimiter, unsigned char sendflag);
+int lrvtc_update_message(char * columnName, int index , char * message);
+int lrvtc_update_message_ifequals(char * columnName, int index, char * message, char * ifmessage);
+int lrvtc_update_row1(char * columnNames, int index , char * messages, char * delimiter);
+int lrvtc_retrieve_message(char * columnName);
+int lrvtc_retrieve_messages1(char * columnNames, char * delimiter);
+int lrvtc_retrieve_row();
+int lrvtc_increment(char * columnName, int index , int incrValue);
+int lrvtc_clear_message(char * columnName, int index);
+int lrvtc_clear_column(char * columnName); 
+int lrvtc_ensure_index(char * columnName); 
+int lrvtc_drop_index(char * columnName); 
+int lrvtc_clear_row(int rowIndex);
+int lrvtc_create_column(char * columnName);
+int lrvtc_column_size(char * columnName);
+
+
+
+ 
+ 
+ 
+ 
+ 
+
  
 int lr_enable_ip_spoofing();
 int lr_disable_ip_spoofing();
@@ -798,6 +890,17 @@ int lr_disable_ip_spoofing();
 
 
 int lr_convert_string_encoding(char *sourceString, char *fromEncoding, char *toEncoding, char *paramName);
+
+
+ 
+int lr_db_connect (char * pFirstArg, ...);
+int lr_db_disconnect (char * pFirstArg,	...);
+int lr_db_executeSQLStatement (char * pFirstArg, ...);
+int lr_db_dataset_action(char * pFirstArg, ...);
+int lr_checkpoint(char * pFirstArg,	...);
+int lr_db_getvalue(char * pFirstArg, ...);
+
+
 
 
 
@@ -824,6 +927,156 @@ int lr_convert_string_encoding(char *sourceString, char *fromEncoding, char *toE
 
 # 1 "d:\\lrscript\\generaltest\\\\combined_GeneralTest.c" 2
 
+# 1 "D:\\Program Files (x86)\\HP\\LoadRunner\\include/SharedParameter.h" 1
+
+
+
+ 
+ 
+ 
+ 
+# 100 "D:\\Program Files (x86)\\HP\\LoadRunner\\include/SharedParameter.h"
+
+
+
+
+
+typedef int PVCI2;
+typedef int VTCERR2;
+
+ 
+ 
+ 
+
+ 
+extern PVCI2    vtc_connect(char *servername, int portnum, int options);
+extern VTCERR2  vtc_disconnect(int pvci);
+extern VTCERR2  vtc_get_last_error(int pvci);
+
+ 
+extern VTCERR2  vtc_query_column(int pvci, char *columnName, int columnIndex, char **outvalue);
+extern VTCERR2  vtc_query_row(int pvci, int columnIndex, char ***outcolumns, char ***outvalues);
+extern VTCERR2  vtc_send_message(int pvci, char *column, char *message, unsigned short *outRc);
+extern VTCERR2  vtc_send_if_unique(int pvci, char *column, char *message, unsigned short *outRc);
+extern VTCERR2  vtc_send_row1(int pvci, char *columnNames, char *messages, char *delimiter,  unsigned char sendflag, unsigned short *outUpdates);
+extern VTCERR2  vtc_update_message(int pvci, char *column, int index , char *message, unsigned short *outRc);
+extern VTCERR2  vtc_update_message_ifequals(int pvci, char	*columnName, int index,	char *message, char	*ifmessage,	unsigned short 	*outRc);
+extern VTCERR2  vtc_update_row1(int pvci, char *columnNames, int index , char *messages, char *delimiter, unsigned short *outUpdates);
+extern VTCERR2  vtc_retrieve_message(int pvci, char *column, char **outvalue);
+extern VTCERR2  vtc_retrieve_messages1(int pvci, char *columnNames, char *delimiter, char ***outvalues);
+extern VTCERR2  vtc_retrieve_row(int pvci, char ***outcolumns, char ***outvalues);
+extern VTCERR2  vtc_increment(int pvci, char *column, int index , int incrValue, int *outValue);
+extern VTCERR2  vtc_clear_message(int pvci, char *column, int index , unsigned short *outRc);
+extern VTCERR2  vtc_clear_column(int pvci, char *column, unsigned short *outRc);
+
+extern VTCERR2  vtc_clear_row(int pvci, int rowIndex, unsigned short *outRc);
+
+extern VTCERR2  vtc_create_column(int pvci, char *column,unsigned short *outRc);
+extern VTCERR2  vtc_column_size(int pvci, char *column, int *size);
+extern VTCERR2  vtc_ensure_index(int pvci, char *column, unsigned short *outRc);
+extern VTCERR2  vtc_drop_index(int pvci, char *column, unsigned short *outRc);
+
+extern VTCERR2  vtc_noop(int pvci);
+
+ 
+extern void vtc_free(char *msg);
+extern void vtc_free_list(char **msglist);
+
+ 
+
+
+ 
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+ 
+ 
+
+extern VTCERR2  lrvtc_connect(char *servername, int portnum, int options);
+extern VTCERR2  lrvtc_disconnect();
+extern VTCERR2  lrvtc_query_column(char *columnName, int columnIndex);
+extern VTCERR2  lrvtc_query_row(int columnIndex);
+extern VTCERR2  lrvtc_send_message(char *columnName, char *message);
+extern VTCERR2  lrvtc_send_if_unique(char *columnName, char *message);
+extern VTCERR2  lrvtc_send_row1(char *columnNames, char *messages, char *delimiter,  unsigned char sendflag);
+extern VTCERR2  lrvtc_update_message(char *columnName, int index , char *message);
+extern VTCERR2  lrvtc_update_message_ifequals(char *columnName, int index, char 	*message, char *ifmessage);
+extern VTCERR2  lrvtc_update_row1(char *columnNames, int index , char *messages, char *delimiter);
+extern VTCERR2  lrvtc_retrieve_message(char *columnName);
+extern VTCERR2  lrvtc_retrieve_messages1(char *columnNames, char *delimiter);
+extern VTCERR2  lrvtc_retrieve_row();
+extern int     lrvtc_increment(char *columnName, int index , int incrValue);
+extern VTCERR2  lrvtc_clear_message(char *columnName, int index);
+extern VTCERR2  lrvtc_clear_column(char *columnName);
+extern VTCERR2  lrvtc_clear_row(int rowIndex);
+extern VTCERR2  lrvtc_create_column(char *columnName);
+extern int     lrvtc_column_size(char *columnName);
+extern VTCERR2  lrvtc_ensure_index(char *columnName);
+extern VTCERR2  lrvtc_drop_index(char *columnName);
+
+extern VTCERR2  lrvtc_noop();
+
+ 
+ 
+ 
+
+                               
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 2 "d:\\lrscript\\generaltest\\\\combined_GeneralTest.c" 2
+
 # 1 "globals.h" 1
 
 
@@ -831,8 +1084,7 @@ int lr_convert_string_encoding(char *sourceString, char *fromEncoding, char *toE
  
  
 
-# 1 "C:\\Program Files (x86)\\HP\\LoadRunner\\include/web_api.h" 1
- 
+# 1 "D:\\Program Files (x86)\\HP\\LoadRunner\\include/web_api.h" 1
 
 
 
@@ -840,8 +1092,8 @@ int lr_convert_string_encoding(char *sourceString, char *fromEncoding, char *toE
 
 
 
-# 1 "C:\\Program Files (x86)\\HP\\LoadRunner\\include/as_web.h" 1
- 
+# 1 "D:\\Program Files (x86)\\HP\\LoadRunner\\include/as_web.h" 1
+
 
 
 
@@ -1029,6 +1281,35 @@ int lr_convert_string_encoding(char *sourceString, char *fromEncoding, char *toE
 										 
 										 
   int
+	spdy_custom_request(
+		const char *		mpszReqestName,
+		...);							 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+  int
 	web_disable_keep_alive(void);
   int
 	web_enable_keep_alive(void);
@@ -1102,7 +1383,6 @@ int lr_convert_string_encoding(char *sourceString, char *fromEncoding, char *toE
 										 
 										 
 										 
-
   int
 	web_reg_find(
 		const char *		mpszArg1,
@@ -1192,6 +1472,9 @@ int lr_convert_string_encoding(char *sourceString, char *fromEncoding, char *toE
 	web_set_proxy(
 		const char *		mpszProxyHost);
   int
+	web_set_pac(
+		const char *		mpszPacUrl);
+  int
 	web_set_proxy_bypass(
 		const char *		mpszBypass);
   int
@@ -1258,6 +1541,40 @@ int lr_convert_string_encoding(char *sourceString, char *fromEncoding, char *toE
 										 
 										 
   int
+	spdy_submit_data(
+		const char *		mpszStepName,
+		...);							 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+
+  int
 	web_submit_form(
 		const char *		mpszStepName,
 		...);							 
@@ -1305,6 +1622,28 @@ int lr_convert_string_encoding(char *sourceString, char *fromEncoding, char *toE
 	web_url(
 		const char *		mpszUrlName,
 		...);							 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+
+  int
+	spdy_url(
+		const char *		mpszUrlName,
+		...);							 
+										 
 										 
 										 
 										 
@@ -1417,6 +1756,38 @@ int lr_convert_string_encoding(char *sourceString, char *fromEncoding, char *toE
 										 
 										 
 
+  int
+	web_reg_save_param_regexp(
+		 const char * mpszParamName,
+		 ...);							
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+
+  int
+	web_js_run(
+		const char * mpszCode,
+		...);							
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+
+  int
+	web_js_reset(void);
 
 
 
@@ -1426,14 +1797,11 @@ int lr_convert_string_encoding(char *sourceString, char *fromEncoding, char *toE
 
 
 
-# 596 "C:\\Program Files (x86)\\HP\\LoadRunner\\include/as_web.h"
+
+# 716 "D:\\Program Files (x86)\\HP\\LoadRunner\\include/as_web.h"
 
 
-# 609 "C:\\Program Files (x86)\\HP\\LoadRunner\\include/as_web.h"
-
-
-
-
+# 729 "D:\\Program Files (x86)\\HP\\LoadRunner\\include/as_web.h"
 
 
 
@@ -1457,7 +1825,11 @@ int lr_convert_string_encoding(char *sourceString, char *fromEncoding, char *toE
 
 
 
-# 647 "C:\\Program Files (x86)\\HP\\LoadRunner\\include/as_web.h"
+
+
+
+
+# 767 "D:\\Program Files (x86)\\HP\\LoadRunner\\include/as_web.h"
 
  
  
@@ -1504,25 +1876,46 @@ int lr_convert_string_encoding(char *sourceString, char *fromEncoding, char *toE
 
 
 
-# 715 "C:\\Program Files (x86)\\HP\\LoadRunner\\include/as_web.h"
+# 835 "D:\\Program Files (x86)\\HP\\LoadRunner\\include/as_web.h"
+
+
+  int
+	web_rest(
+		const char *		mpszReqestName,
+		...);							 
+										 
+										 
+										 
+										 
+
+ 
+ 
+ 
+
+
+
+
+
+
+# 9 "D:\\Program Files (x86)\\HP\\LoadRunner\\include/web_api.h" 2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
  
- 
- 
-
-
-
-
-
-
-# 10 "C:\\Program Files (x86)\\HP\\LoadRunner\\include/web_api.h" 2
-
-
-
-
-
 
 
 
@@ -1534,10 +1927,6 @@ int lr_convert_string_encoding(char *sourceString, char *fromEncoding, char *toE
 
 
 
-
-
-
- 
 
 
 
@@ -1710,18 +2099,279 @@ int lr_convert_string_encoding(char *sourceString, char *fromEncoding, char *toE
 										 
 										 
 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  int
+	web_reg_async_attributes(
+		const char *		mpszArg,
+		...
+	);
 
+ 
+ 
+ 
+ 
+ 
+ 
+  int
+	web_sync(
+		 const char *		mpszArg1,
+		 ...
+	);
+
+ 
+ 
+ 
+ 
+  int
+	web_stop_async(
+		const char *		mpszArg1,
+		...
+	);
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+
+typedef enum WEB_ASYNC_CB_RC_ENUM_T
+{
+	WEB_ASYNC_CB_RC_OK,				 
+
+	WEB_ASYNC_CB_RC_ABORT_ASYNC_NOT_ERROR,
+	WEB_ASYNC_CB_RC_ABORT_ASYNC_ERROR,
+										 
+										 
+										 
+										 
+	WEB_ASYNC_CB_RC_ENUM_COUNT
+} WEB_ASYNC_CB_RC_ENUM;
+
+ 
+ 
+ 
+
+typedef enum WEB_CONVERS_CB_CALL_REASON_ENUM_T
+{
+	WEB_CONVERS_CB_CALL_REASON_BUFFER_RECEIVED,
+	WEB_CONVERS_CB_CALL_REASON_END_OF_TASK,
+
+	WEB_CONVERS_CB_CALL_REASON_ENUM_COUNT
+} WEB_CONVERS_CB_CALL_REASON_ENUM;
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+typedef
+int														 
+	(*RequestCB_t)();
+
+typedef
+int														 
+	(*ResponseBodyBufferCB_t)(
+		  const char *		aLastBufferStr,
+		  int				aLastBufferLen,
+		  const char *		aAccumulatedStr,
+		  int				aAccumulatedLen,
+		  int				aHttpStatusCode);
+
+typedef
+int														 
+	(*ResponseCB_t)(
+		  const char *		aResponseHeadersStr,
+		  int				aResponseHeadersLen,
+		  const char *		aResponseBodyStr,
+		  int				aResponseBodyLen,
+		  int				aHttpStatusCode);
+
+typedef
+int														 
+	(*ResponseHeadersCB_t)(
+		  int				aHttpStatusCode,
+		  const char *		aAccumulatedHeadersStr,
+		  int				aAccumulatedHeadersLen);
 
 
 
  
  
  
+
+typedef enum WEB_CONVERS_UTIL_RC_ENUM_T
+{
+	WEB_CONVERS_UTIL_RC_OK,
+	WEB_CONVERS_UTIL_RC_CONVERS_NOT_FOUND,
+	WEB_CONVERS_UTIL_RC_TASK_NOT_FOUND,
+	WEB_CONVERS_UTIL_RC_INFO_NOT_FOUND,
+	WEB_CONVERS_UTIL_RC_INFO_UNAVIALABLE,
+	WEB_CONVERS_UTIL_RC_INVALID_ARGUMENT,
+
+	WEB_CONVERS_UTIL_RC_ENUM_COUNT
+} WEB_CONVERS_UTIL_RC_ENUM;
+
+ 
+ 
+ 
+
+  int					 
+	web_util_set_request_url(
+		  const char *		aUrlStr);
+
+  int					 
+	web_util_set_request_body(
+		  const char *		aRequestBodyStr);
+
+  int					 
+	web_util_set_formatted_request_body(
+		  const char *		aRequestBodyStr);
+
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+  int
+web_websocket_connect(
+		 const char *	mpszArg1,
+		 ...
+		 );
+
+
+ 
+ 
+ 
+ 
+ 																						
+  int
+web_websocket_send(
+	   const char *		mpszArg1,
+		...
+	   );
+
+ 
+ 
+ 
+ 
+ 
+ 
+  int
+web_websocket_close(
+		const char *	mpszArg1,
+		...
+		);
+
+ 
+typedef
+void														
+(*OnOpen_t)(
+			  const char* connectionID,  
+			  const char * responseHeader,  
+			  int length  
+);
+
+typedef
+void														
+(*OnMessage_t)(
+	  const char* connectionID,  
+	  int isbinary,  
+	  const char * data,  
+	  int length  
+	);
+
+typedef
+void														
+(*OnError_t)(
+	  const char* connectionID,  
+	  const char * message,  
+	  int length  
+	);
+
+typedef
+void														
+(*OnClose_t)(
+	  const char* connectionID,  
+	  int isClosedByClient,  
+	  int code,  
+	  const char* reason,  
+	  int length  
+	 );
+ 
+ 
+ 
+ 
+ 
+
+
+
 
 
 # 7 "globals.h" 2
 
-# 1 "C:\\Program Files (x86)\\HP\\LoadRunner\\include/lrw_custom_body.h" 1
+# 1 "D:\\Program Files (x86)\\HP\\LoadRunner\\include/lrw_custom_body.h" 1
  
 
 
@@ -1735,14 +2385,14 @@ int lr_convert_string_encoding(char *sourceString, char *fromEncoding, char *toE
  
 
 
-# 2 "d:\\lrscript\\generaltest\\\\combined_GeneralTest.c" 2
+# 3 "d:\\lrscript\\generaltest\\\\combined_GeneralTest.c" 2
 
 # 1 "vuser_init.c" 1
 vuser_init()
 {
 	return 0;
 }
-# 3 "d:\\lrscript\\generaltest\\\\combined_GeneralTest.c" 2
+# 4 "d:\\lrscript\\generaltest\\\\combined_GeneralTest.c" 2
 
 # 1 "Action.c" 1
 Action()
@@ -1759,6 +2409,35 @@ Action()
     char nameVar[100];
  
     char nameValue[100];
+    
+    
+    int result;
+
+    char tmps[20];
+
+    char string1[] = "The quick brown dog jumps over the lazy fox";
+
+    char string2[] = "The QUICK brown dog jumps over the lazy fox";
+
+    result = strcmp( string1, string2);  
+
+    if(result > 0)
+
+        strcpy(tmps, "greater than");
+
+    else if(result < 0)
+
+        strcpy(tmps, "less than");
+
+    else
+
+        strcpy(tmps, "equal to");
+
+    lr_output_message ("strcmp: String 1 is %s string 2", tmps);
+
+
+
+
 
 	lr_output_message( "#%s", lr_eval_string( "{testData}" ) );
      
@@ -1787,6 +2466,7 @@ Action()
   
     lr_save_string("3","name_count"); 
  
+
  
     for(num=1;num<=atoi(lr_eval_string("{name_count}"));num++){
 
@@ -1834,12 +2514,12 @@ Action()
 
 	return 0;
 }
-# 4 "d:\\lrscript\\generaltest\\\\combined_GeneralTest.c" 2
+# 5 "d:\\lrscript\\generaltest\\\\combined_GeneralTest.c" 2
 
 # 1 "vuser_end.c" 1
 vuser_end()
 {
 	return 0;
 }
-# 5 "d:\\lrscript\\generaltest\\\\combined_GeneralTest.c" 2
+# 6 "d:\\lrscript\\generaltest\\\\combined_GeneralTest.c" 2
 

@@ -1,11 +1,12 @@
-Virtual User Script started at : 2019-09-17 18:43:25
+Virtual User Script started at : 2019/9/20 11:40:27
 Starting action vuser_init.
-Web Turbo Replay of LoadRunner 11.0.0 for Windows 7; build 8859 (Aug 18 2010 20:14:31)  	[MsgId: MMSG-27143]
-Run Mode: HTML  	[MsgId: MMSG-26000]
+Web Turbo Replay of LoadRunner 12.0.0 for Windows 7; build 2739 (Nov 30 2014 23:13:05)  	[MsgId: MMSG-27143]
+Run mode: HTML  	[MsgId: MMSG-26993]
 Run-Time Settings file: "D:\lrScript\GeneralTest\\default.cfg"  	[MsgId: MMSG-27141]
 Ending action vuser_init.
 Running Vuser...
 Starting iteration 1.
+Maximum number of concurrent connections per server: 2  	[MsgId: MMSG-26989]
 Starting action Action.
 Action.c(16): #a
 Action.c(18): #a

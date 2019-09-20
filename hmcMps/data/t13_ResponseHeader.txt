@@ -1,0 +1,14 @@
+HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Cache-Control: max-age=86400
+Connection: Keep-Alive
+Content-Encoding: gzip
+Content-Length: 4863
+Content-Type: text/html
+Date: Thu, 19 Sep 2019 10:57:24 GMT
+Etag: "3dec-57b3a9a43af80"
+Expires: Fri, 20 Sep 2019 10:57:24 GMT
+Last-Modified: Thu, 22 Nov 2018 06:01:50 GMT
+Server: Apache
+Vary: Accept-Encoding,User-Agent
+

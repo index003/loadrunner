@@ -1,0 +1,386 @@
+[API Trapper      ( ea8: c24)] Recording in 32-bit mode: C:\Program Files (x86)\Internet Explorer\iexplore.exe
+[Network Analyzer ( ea8: 4d0)] ------------------------------------------------------------------------------------------
+[Network Analyzer ( ea8: 4d0)] Load Network Traffic Analyzers:
+[Network Analyzer ( ea8: 4d0)]     Analyzer Module: WPLUS (value=)
+[Network Analyzer ( ea8: 4d0)]     Analyzer Module: WebBase (value=GetHttpProtocolAnalyzer:api_http_filter.dll)
+[Network Analyzer ( ea8: 4d0)]     + Network Analyzer: api_http_filter.dll @ GetHttpProtocolAnalyzer Loaded!
+[Network Analyzer ( ea8: 4d0)]     + Interception Auditors: WinInetWplusInterceptionAudit:api_http_filter.dll
+[Network Analyzer ( ea8: 4d0)]     Analyzer Module: QTWeb (value=GetWebSocketProtocolAnalyzer:WebSocketAnalyzer.dll)
+[Network Analyzer ( ea8: 4d0)]     + Network Analyzer: WebSocketAnalyzer.dll @ GetWebSocketProtocolAnalyzer Loaded!
+[Network Analyzer ( ea8: 4d0)]     Analyzer Module: local_server (value=)
+[Network Analyzer ( ea8: 4d0)] ------------------------------------------------------------------------------------------
+[Network Analyzer ( ea8: a08)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( ea8:131c)] Address lookup for conna.gj.qq.com = 180.163.32.152
+[Network Analyzer ( ea8:131c)] Address lookup for connb.gj.qq.com = 183.57.48.55
+[Network Analyzer ( ea8:1008)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( ea8:1008)] Request Connection: Remote Server @ 10.0.3.32:80   (Service=)  (Sid=  1)  PROXIED!
+[Network Analyzer ( ea8:11c4)] Address lookup for PC-20190621001 = 10.0.6.223
+[Web Request      ( ea8: a08)] "GET /fs/login.html"   
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Client -> Server @ : 346 bytes (Service=HTTP)
+[Network Analyzer ( ea8:11c4)] Request Connection: Remote Server @ 180.163.32.152:80   (Service=)  (Sid=  2)  PROXIED!
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 1460 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 7789 bytes  (Service=HTTP)
+[Web Request      ( ea8: a08)] "POST /q.cgi"   
+[Network Analyzer ( ea8: a08)]   (Sid:  2) Client -> Server @ : 382 bytes (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid:  2) Server -> Client : 290 bytes  (Service=HTTP)
+[Network Analyzer ( ea8:1344)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( ea8:13a4)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( ea8: a08)]   (Sid:  2) Connection Terminated (by Client)
+[Network Analyzer ( ea8:1344)] Request Connection: Remote Server @ 101.91.63.141:443   (Service=)  (Sid=  3)  PROXIED!
+[Network Analyzer ( ea8:13a4)] Request Connection: Remote Server @ 101.91.63.141:443   (Service=)  (Sid=  4)  PROXIED!
+[Network Analyzer ( ea8:10e8)]   (Sid:  3) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( ea8:11b4)]   (Sid:  4) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( ea8:10e8)]   (Sid:  3) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1, ciphers:AES128-SHA)
+[Network Analyzer ( ea8:11b4)]   (Sid:  4) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1, ciphers:AES128-SHA)
+[Network Analyzer ( ea8:132c)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( ea8:1008)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( ea8:132c)] Request Connection: Remote Server @ 125.77.142.200:80   (Service=)  (Sid=  5)  PROXIED!
+[Network Analyzer ( ea8:1008)] Request Connection: Remote Server @ 125.77.142.200:80   (Service=)  (Sid=  6)  PROXIED!
+[Network Analyzer ( ea8:132c)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( ea8:132c)] Request Connection: Remote Server @ 180.153.105.203:80   (Service=)  (Sid=  7)  PROXIED!
+[Network Analyzer ( ea8:1008)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( ea8:1008)] Request Connection: Remote Server @ 180.153.100.210:80   (Service=)  (Sid=  8)  PROXIED!
+[Network Analyzer ( ea8:12f8)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( ea8:12f8)] Request Connection: Remote Server @ 101.91.63.141:443   (Service=)  (Sid=  9)  PROXIED!
+[Network Analyzer ( ea8:1020)]   (Sid:  9) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( ea8:1020)]   (Sid:  9) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1, ciphers:AES128-SHA)
+[Web Request      ( ea8: a08)] "POST /"   
+[Network Analyzer ( ea8: a08)]   (Sid:  9) Client -> Server @ : 545 bytes (SSL)(Service=HTTP)
+[Network Analyzer ( ea8: 938)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( ea8: a08)]   (Sid:  9) Server -> Client : 329 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ea8: 938)] Request Connection: Remote Server @ 101.91.63.141:443   (Service=)  (Sid= 10)  PROXIED!
+[Network Analyzer ( ea8: 9c0)]   (Sid: 10) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( ea8: 9c0)]   (Sid: 10) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1, ciphers:AES128-SHA)
+[Web Request      ( ea8: a08)] "POST /"   
+[Network Analyzer ( ea8: a08)]   (Sid: 10) Client -> Server @ : 545 bytes (SSL)(Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 10) Server -> Client : 329 bytes (SSL) (Service=HTTP)
+[Web Request      ( ea8: a08)] "GET /resources/js/jquery-1.8.0.min.js"   
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Client -> Server @ : 419 bytes (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 1460 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 9652 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 8436 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 1460 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 1136 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 6976 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 1460 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 13032 bytes  (Service=HTTP)
+[Web Request      ( ea8: a08)] "GET /resources/js/easyui-1.3.2/themes/default/easyui.css"   
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Client -> Server @ : 438 bytes (Service=HTTP)
+[Network Analyzer ( ea8:1070)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( ea8:1008)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( ea8:1070)] Request Connection: Remote Server @ 10.0.3.32:80   (Service=)  (Sid= 11)  PROXIED!
+[Web Request      ( ea8: a08)] "GET /resources/js/easyui-1.3.2/themes/icon.css"   
+[Network Analyzer ( ea8: a08)]   (Sid: 11) Client -> Server @ : 428 bytes (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 1460 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 4380 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 5983 bytes  (Service=HTTP)
+[Web Request      ( ea8: a08)] "GET /resources/css/base.css"   
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Client -> Server @ : 409 bytes (Service=HTTP)
+[Network Analyzer ( ea8:1008)] Request Connection: Remote Server @ 10.0.3.32:80   (Service=)  (Sid= 12)  PROXIED!
+[Network Analyzer ( ea8: a08)]   (Sid: 11) Server -> Client : 1460 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 11) Server -> Client : 1259 bytes  (Service=HTTP)
+[Web Request      ( ea8: a08)] "GET /resources/js/jquery.easyui.min.js"   
+[Network Analyzer ( ea8: a08)]   (Sid: 12) Client -> Server @ : 420 bytes (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 722 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 12) Server -> Client : 1460 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 12) Server -> Client : 4380 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 12) Server -> Client : 8192 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 12) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 12) Server -> Client : 8436 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 12) Server -> Client : 1460 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 12) Server -> Client : 7300 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 12) Server -> Client : 14600 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 12) Server -> Client : 8760 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 12) Server -> Client : 16060 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 12) Server -> Client : 1460 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 12) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 12) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 12) Server -> Client : 3732 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 12) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 12) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 12) Server -> Client : 8112 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 12) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 12) Server -> Client : 14276 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 12) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 12) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 12) Server -> Client : 3732 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 12) Server -> Client : 14600 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 12) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 12) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 12) Server -> Client : 9572 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 12) Server -> Client : 7017 bytes  (Service=HTTP)
+[Web Request      ( ea8: a08)] "GET /resources/js/easyui-1.3.2/locale/easyui-lang-zh_CN.js"   
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Client -> Server @ : 440 bytes (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 1460 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 1302 bytes  (Service=HTTP)
+[Web Request      ( ea8: a08)] "GET /resources/js/jquery-capsLockTip.js"   
+[Network Analyzer ( ea8: a08)]   (Sid: 11) Client -> Server @ : 421 bytes (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 11) Server -> Client : 1460 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 11) Server -> Client : 53 bytes  (Service=HTTP)
+[Web Request      ( ea8: a08)] "GET /fs/fs/js/mobileLogin.js?v=1.3"   
+[Network Analyzer ( ea8: a08)]   (Sid: 12) Client -> Server @ : 416 bytes (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 12) Server -> Client : 1460 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 12) Server -> Client : 6269 bytes  (Service=HTTP)
+[Web Request      ( ea8: a08)] "GET /resources/images/admin/login.png"   
+[Network Analyzer ( ea8: c3c)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Client -> Server @ : 419 bytes (Service=HTTP)
+[Web Request      ( ea8: a08)] "GET /resources/images/admin/reset.png"   
+[Network Analyzer ( ea8: a08)]   (Sid: 11) Client -> Server @ : 419 bytes (Service=HTTP)
+[Web Request      ( ea8: a08)] "GET /resources/images/admin/logo_1.png"   
+[Network Analyzer ( ea8: a08)]   (Sid: 12) Client -> Server @ : 420 bytes (Service=HTTP)
+[Network Analyzer ( ea8: c3c)] Request Connection: Remote Server @ 10.0.3.32:80   (Service=)  (Sid= 13)  PROXIED!
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 2765 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 11) Server -> Client : 2739 bytes  (Service=HTTP)
+[Web Request      ( ea8: a08)] "GET /resources/images/admin/IOS_dealer_110.png"   
+[Network Analyzer ( ea8: a08)]   (Sid: 13) Client -> Server @ : 428 bytes (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 12) Server -> Client : 6119 bytes  (Service=HTTP)
+[Web Request      ( ea8: a08)] "GET /resources/images/admin/android_dealer_110.png"   
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Client -> Server @ : 432 bytes (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 13) Server -> Client : 1386 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 1377 bytes  (Service=HTTP)
+[Web Request      ( ea8: a08)] "GET /resources/images/lock_bg1.jpg"   
+[Network Analyzer ( ea8: a08)]   (Sid: 11) Client -> Server @ : 416 bytes (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 11) Server -> Client : 840 bytes  (Service=HTTP)
+[Network Analyzer ( ea8:1344)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( ea8: a08)]   (Sid:  3) Connection Terminated (by Client)
+[Network Analyzer ( ea8:1344)] Request Connection: Remote Server @ 101.91.63.141:443   (Service=)  (Sid= 14)  PROXIED!
+[Network Analyzer ( ea8:1240)]   (Sid: 14) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( ea8:1240)]   (Sid: 14) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1, ciphers:AES128-SHA)
+[Network Analyzer ( ea8: a08)]   (Sid:  4) Connection Terminated (by Client)
+[Network Analyzer ( ea8: a08)]   (Sid: 14) Connection Terminated (by Client)
+[Network Analyzer ( ea8:1344)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( ea8:1344)] Request Connection: Remote Server @ 101.91.63.141:443   (Service=)  (Sid= 15)  PROXIED!
+[Network Analyzer ( ea8: e84)]   (Sid: 15) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( ea8: e84)]   (Sid: 15) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1, ciphers:AES128-SHA)
+[Web Request      ( ea8: a08)] "GET /favicon.ico"   
+[Network Analyzer ( ea8: a08)]   (Sid: 12) Client -> Server @ : 373 bytes (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 12) Server -> Client : 726 bytes  (Service=HTTP)
+[Web Request      ( ea8: a08)] "GET /fs/fs/fsEmploy.do?method=getLastOrder"   
+[Network Analyzer ( ea8: a08)]   (Sid: 13) Client -> Server @ : 511 bytes (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 13) Server -> Client : 1460 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 13) Server -> Client : 10220 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 13) Server -> Client : 1460 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 13) Server -> Client : 21 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 15) Connection Terminated (by Client)
+[Network Analyzer ( ea8:13a8)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( ea8:13a8)] Request Connection: Remote Server @ 202.89.233.100:80   (Service=)  (Sid= 16)  PROXIED!
+[Web Request      ( ea8: a08)] "GET /favicon.ico"   
+[Network Analyzer ( ea8: a08)]   (Sid: 16) Client -> Server @ : 357 bytes (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 16) Server -> Client : 577 bytes  (Service=HTTP)
+[Web Request      ( ea8: a08)] "GET /fs/fs/fsEmploy.do?method=validateAccount&empPhone=17765161670&empUser="   
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Client -> Server @ : 587 bytes (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 383 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid:  5) Connection Terminated (by Server)
+[Network Analyzer ( ea8: a08)]   (Sid:  6) Connection Terminated (by Server)
+[Web Request      ( ea8: a08)] "GET /fs/fs/fsEmploy.do?method=validateSmCode&phone=17765161670&code=041713"   
+[Network Analyzer ( ea8: a08)]   (Sid: 11) Client -> Server @ : 543 bytes (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 11) Server -> Client : 292 bytes  (Service=HTTP)
+[Web Request      ( ea8: a08)] "GET /resources/js/easyui-1.3.2/themes/default/images/panel_tools.png"   
+[Network Analyzer ( ea8: a08)]   (Sid: 12) Client -> Server @ : 503 bytes (Service=HTTP)
+[Web Request      ( ea8: a08)] "GET /resources/js/easyui-1.3.2/themes/default/images/blank.gif"   
+[Network Analyzer ( ea8: a08)]   (Sid: 13) Client -> Server @ : 497 bytes (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 12) Server -> Client : 1046 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 13) Server -> Client : 236 bytes  (Service=HTTP)
+[Web Request      ( ea8: a08)] "POST /fs/fs/fsEmploy.do?method=login"   
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Client -> Server @ : 739 bytes (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 501 bytes  (Service=HTTP)
+[Network Analyzer ( ea8:1344)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( ea8:1344)] Request Connection: Remote Server @ 101.91.63.141:443   (Service=)  (Sid= 17)  PROXIED!
+[Network Analyzer ( ea8: a08)]   (Sid:  7) Connection Terminated (by Server)
+[Network Analyzer ( ea8: a8c)]   (Sid: 17) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( ea8: a8c)]   (Sid: 17) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1, ciphers:AES128-SHA)
+[Network Analyzer ( ea8: a08)]   (Sid:  8) Connection Terminated (by Server)
+[Network Analyzer ( ea8: a08)]   (Sid: 17) Connection Terminated (by Client)
+[Network Analyzer ( ea8:1344)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( ea8:1344)] Request Connection: Remote Server @ 101.91.63.141:443   (Service=)  (Sid= 18)  PROXIED!
+[Network Analyzer ( ea8: 4e4)]   (Sid: 18) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( ea8: 4e4)]   (Sid: 18) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1, ciphers:AES128-SHA)
+[Web Request      ( ea8: a08)] "GET /fs/fs/fsEmploy.do?method=index"   
+[Network Analyzer ( ea8: a08)]   (Sid: 11) Client -> Server @ : 581 bytes (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 11) Server -> Client : 287 bytes  (Service=HTTP)
+[Web Request      ( ea8: a08)] "GET /fs/index.html"   
+[Network Analyzer ( ea8: a08)]   (Sid: 12) Client -> Server @ : 564 bytes (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 12) Server -> Client : 1460 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 12) Server -> Client : 13014 bytes  (Service=HTTP)
+[Web Request      ( ea8: a08)] "GET /resources/js/easyui-1.3.2/themes/gray/easyui.css"   
+[Network Analyzer ( ea8: a08)]   (Sid: 13) Client -> Server @ : 542 bytes (Service=HTTP)
+[Web Request      ( ea8: a08)] "GET /resources/js/jquery-1.7.2.js"   
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Client -> Server @ : 522 bytes (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 13) Server -> Client : 1460 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 13) Server -> Client : 9652 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 13) Server -> Client : 4380 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 13) Server -> Client : 13140 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 1460 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 9652 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 13) Server -> Client : 15914 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 4380 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 8436 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 4380 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 1136 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 6652 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 13140 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 8760 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 16060 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 8760 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 15736 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 1136 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 11032 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 11299 bytes  (Service=HTTP)
+[Web Request      ( ea8: a08)] "GET /resources/js/common.js"   
+[Network Analyzer ( ea8: a08)]   (Sid: 11) Client -> Server @ : 516 bytes (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 11) Server -> Client : 1460 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 11) Server -> Client : 9652 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 11) Server -> Client : 4380 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 11) Server -> Client : 5835 bytes  (Service=HTTP)
+[Web Request      ( ea8: a08)] "GET /fs/fs/js/index.js?v=1.7"   
+[Network Analyzer ( ea8: a08)]   (Sid: 12) Client -> Server @ : 517 bytes (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 12) Server -> Client : 1460 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 12) Server -> Client : 7392 bytes  (Service=HTTP)
+[Web Request      ( ea8: a08)] "GET /resources/js/jQuery-jcMarquee.js"   
+[Network Analyzer ( ea8: a08)]   (Sid: 13) Client -> Server @ : 526 bytes (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 13) Server -> Client : 2811 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 18) Connection Terminated (by Client)
+[Network Analyzer ( ea8:1070)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( ea8:1070)] Request Connection: Remote Server @ 101.89.124.234:443   (Service=)  (Sid= 19)  PROXIED!
+[Network Analyzer ( ea8:1214)]   (Sid: 19) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( ea8:1214)]   (Sid: 19) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1, ciphers:AES128-SHA)
+[Network Analyzer ( ea8:1070)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( ea8:1070)] Request Connection: Remote Server @ 125.77.142.200:80   (Service=)  (Sid= 20)  PROXIED!
+[Network Analyzer ( ea8: a08)]   (Sid: 19) Connection Terminated (by Client)
+[Network Analyzer ( ea8:132c)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( ea8:132c)] Request Connection: Remote Server @ 101.89.124.234:443   (Service=)  (Sid= 21)  PROXIED!
+[Network Analyzer ( ea8:1150)]   (Sid: 21) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( ea8:1150)]   (Sid: 21) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1, ciphers:AES128-SHA)
+[Web Request      ( ea8: a08)] "GET /z_stat.php?id=1262932335&web_id=1262932335"   
+[Network Analyzer ( ea8: a08)]   (Sid: 21) Client -> Server @ : 419 bytes (SSL)(Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 21) Server -> Client : 658 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 21) Server -> Client : 4053 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ea8:138c)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( ea8:138c)] Request Connection: Remote Server @ 101.89.124.234:443   (Service=)  (Sid= 22)  PROXIED!
+[Network Analyzer ( ea8: 500)]   (Sid: 22) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( ea8: 500)]   (Sid: 22) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1, ciphers:AES128-SHA)
+[Network Analyzer ( ea8:138c)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( ea8: a08)]   (Sid: 22) Connection Terminated (by Client)
+[Network Analyzer ( ea8:138c)] Request Connection: Remote Server @ 101.89.124.234:443   (Service=)  (Sid= 23)  PROXIED!
+[Network Analyzer ( ea8: 4a8)]   (Sid: 23) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( ea8: 4a8)]   (Sid: 23) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1, ciphers:AES128-SHA)
+[Network Analyzer ( ea8:132c)] Address lookup for PC-20190621001 = 10.0.6.223
+[Web Request      ( ea8: a08)] "GET /core.php?web_id=1262932335&t=z"   
+[Network Analyzer ( ea8: a08)]   (Sid: 23) Client -> Server @ : 405 bytes (SSL)(Service=HTTP)
+[Network Analyzer ( ea8:132c)] Request Connection: Remote Server @ 203.119.206.95:443   (Service=)  (Sid= 24)  PROXIED!
+[Network Analyzer ( ea8: a08)]   (Sid: 23) Server -> Client : 646 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 23) Server -> Client : 620 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ea8: d00)]   (Sid: 24) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-RC4-SHA)
+[Network Analyzer ( ea8: d00)]   (Sid: 24) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1, ciphers:AES128-SHA)
+[Network Analyzer ( ea8: a08)]   (Sid: 24) Connection Terminated (by Client)
+[Network Analyzer ( ea8:132c)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( ea8:132c)] Request Connection: Remote Server @ 106.11.251.77:443   (Service=)  (Sid= 25)  PROXIED!
+[Network Analyzer ( ea8:12d0)]   (Sid: 25) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( ea8:12d0)]   (Sid: 25) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1, ciphers:AES128-SHA)
+[Network Analyzer ( ea8:13a8)] Address lookup for PC-20190621001 = 10.0.6.223
+[Web Request      ( ea8: a08)] "GET /fs/fs/fsEmploy.do?method=getCurUser&_=1568890644480"   
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Client -> Server @ : 752 bytes (Service=HTTP)
+[Web Request      ( ea8: a08)] "GET /fs/fs/fsRespond.do?method=getWaitProcessTaskInfo&_=1568890644484"   
+[Network Analyzer ( ea8: a08)]   (Sid: 11) Client -> Server @ : 765 bytes (Service=HTTP)
+[Network Analyzer ( ea8:13a8)] Request Connection: Remote Server @ 203.119.206.95:443   (Service=)  (Sid= 26)  PROXIED!
+[Network Analyzer ( ea8: a08)]   (Sid:  1) Server -> Client : 517 bytes  (Service=HTTP)
+[Network Analyzer ( ea8:1304)]   (Sid: 26) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-RC4-SHA)
+[Network Analyzer ( ea8:1304)]   (Sid: 26) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1, ciphers:AES128-SHA)
+[Network Analyzer ( ea8: a08)]   (Sid: 11) Server -> Client : 330 bytes  (Service=HTTP)
+[Web Request      ( ea8: a08)] "GET /stat.htm?id=1262932335&r=&lg=zh-cn&ntime=none&cnzz_eid=438912350-1568886028-&showp=1920x1080&p=http%3A%2F%2Fmps-test.haomaiche.com%2Ffs%2Findex.html&t=4S%E5%BA%97%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E7%99%BB%E5%BD%95%E7%95%8C%E9%9D%A2&umuuid=16d492b3fd41bf-09b093332a586-26596859-1fa400-16d492b3fd51ca&h=1&rnd=668763734"   
+[Network Analyzer ( ea8: a08)]   (Sid: 26) Client -> Server @ : 713 bytes (SSL)(Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 26) Server -> Client : 245 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 26) Connection Terminated (by Server)
+[Network Analyzer ( ea8:132c)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( ea8:132c)] Request Connection: Remote Server @ 180.97.33.121:80   (Service=)  (Sid= 27)  PROXIED!
+[Network Analyzer ( ea8:13a8)] Address lookup for PC-20190621001 = 10.0.6.223
+[Web Request      ( ea8: a08)] "GET /soft/detail/23360.html"   
+[Network Analyzer ( ea8: a08)]   (Sid: 27) Client -> Server @ : 571 bytes (Service=HTTP)
+[Network Analyzer ( ea8:13a8)] Request Connection: Remote Server @ 114.80.187.102:80   (Service=)  (Sid= 28)  PROXIED!
+[Network Analyzer ( ea8: a08)]   (Sid: 27) Server -> Client : 232 bytes  (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 20) Connection Terminated (by Server)
+[Network Analyzer ( ea8:13a8)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( ea8:13a8)] Request Connection: Remote Server @ 180.101.49.11:443   (Service=)  (Sid= 29)  PROXIED!
+[Network Analyzer ( ea8:138c)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( ea8:138c)] Request Connection: Remote Server @ 106.11.251.77:443   (Service=)  (Sid= 30)  PROXIED!
+[Network Analyzer ( ea8: eac)]   (Sid: 29) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-RC4-SHA)
+[Network Analyzer ( ea8:  fc)]   (Sid: 30) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( ea8: a08)]   (Sid:  9) Connection Terminated (by Client)
+[Network Analyzer ( ea8: a08)]   (Sid: 10) Connection Terminated (by Client)
+[Network Analyzer ( ea8: eac)]   (Sid: 29) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1, ciphers:AES128-SHA)
+[Network Analyzer ( ea8:  fc)]   (Sid: 30) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1, ciphers:AES128-SHA)
+[Web Request      ( ea8: a08)] "GET /9.gif?abc=1&rnd=1903752157"   
+[Network Analyzer ( ea8: a08)]   (Sid: 30) Client -> Server @ : 406 bytes (SSL)(Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 30) Server -> Client : 572 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 30) Connection Terminated (by Server)
+[Network Analyzer ( ea8:138c)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( ea8:138c)] Request Connection: Remote Server @ 114.80.187.102:80   (Service=)  (Sid= 31)  PROXIED!
+[Network Analyzer ( ea8: a08)]   (Sid: 25) Connection Terminated (by Client)
+[Network Analyzer ( ea8: a08)]   (Sid: 16) Connection Terminated (by Server)
+[Network Analyzer ( ea8: c3c)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( ea8: a08)]   (Sid: 29) Connection Terminated (by Client)
+[Network Analyzer ( ea8: c3c)] Request Connection: Remote Server @ 180.101.49.11:443   (Service=)  (Sid= 32)  PROXIED!
+[Network Analyzer ( ea8: 7d0)]   (Sid: 32) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-RC4-SHA)
+[Network Analyzer ( ea8: 7d0)]   (Sid: 32) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1, ciphers:AES128-SHA)
+[Web Request      ( ea8: a08)] "GET /search/error.html"   
+[Network Analyzer ( ea8: a08)]   (Sid: 32) Client -> Server @ : 567 bytes (SSL)(Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 32) Server -> Client : 4000 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 32) Server -> Client : 96 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 32) Server -> Client : 1134 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ea8:13a8)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( ea8:13a8)] Request Connection: Remote Server @ 180.163.198.32:443   (Service=)  (Sid= 33)  PROXIED!
+[Network Analyzer ( ea8: 898)]   (Sid: 33) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( ea8: 898)]   (Sid: 33) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1, ciphers:AES128-SHA)
+[Network Analyzer ( ea8: c3c)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( ea8: a08)]   (Sid: 33) Connection Terminated (by Client)
+[Network Analyzer ( ea8: c3c)] Request Connection: Remote Server @ 180.163.198.32:443   (Service=)  (Sid= 34)  PROXIED!
+[Network Analyzer ( ea8: d08)]   (Sid: 34) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( ea8: d08)]   (Sid: 34) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1, ciphers:AES128-SHA)
+[Web Request      ( ea8: a08)] "GET /5eN1bjq8AAUYm2zgoY3K/r/www/nocache/imgdata/seErrorRec.js"   
+[Network Analyzer ( ea8: a08)]   (Sid: 34) Client -> Server @ : 433 bytes (SSL)(Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 34) Server -> Client : 1039 bytes (SSL) (Service=HTTP)
+[Web Request      ( ea8: a08)] "GET /img/baidu_jgylogo3.gif"   
+[Network Analyzer ( ea8: a08)]   (Sid: 32) Client -> Server @ : 511 bytes (SSL)(Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 32) Server -> Client : 1016 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ea8:138c)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( ea8:138c)] Request Connection: Remote Server @ 180.101.49.11:443   (Service=)  (Sid= 35)  PROXIED!
+[Network Analyzer ( ea8:1344)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( ea8:1344)] Request Connection: Remote Server @ 101.91.63.141:443   (Service=)  (Sid= 36)  PROXIED!
+[Network Analyzer ( ea8: e18)]   (Sid: 35) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-RC4-SHA)
+[Network Analyzer ( ea8: e18)]   (Sid: 35) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1, ciphers:AES128-SHA)
+[Network Analyzer ( ea8: f00)]   (Sid: 36) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( ea8: f00)]   (Sid: 36) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1, ciphers:AES128-SHA)
+[Network Analyzer ( ea8: a08)]   (Sid: 12) Connection Terminated (by Client)
+[Network Analyzer ( ea8: a08)]   (Sid: 13) Connection Terminated (by Client)
+[Network Analyzer ( ea8:1344)] Address lookup for PC-20190621001 = 10.0.6.223
+[Network Analyzer ( ea8:1344)] Request Connection: Remote Server @ 101.91.63.141:443   (Service=)  (Sid= 37)  PROXIED!
+[Network Analyzer ( ea8: 88c)]   (Sid: 37) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( ea8: 88c)]   (Sid: 37) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1, ciphers:AES128-SHA)
+[Network Analyzer ( ea8:138c)] Address lookup for PC-20190621001 = 10.0.6.223
+[Web Request      ( ea8: a08)] "GET /favicon.ico"   
+[Network Analyzer ( ea8: a08)]   (Sid: 32) Client -> Server @ : 426 bytes (SSL)(Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 32) Server -> Client : 1283 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ea8:138c)] Request Connection: Remote Server @ 180.101.49.11:443   (Service=)  (Sid= 38)  PROXIED!
+[Network Analyzer ( ea8: 91c)]   (Sid: 38) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-RC4-SHA)
+[Network Analyzer ( ea8: 91c)]   (Sid: 38) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1, ciphers:AES128-SHA)
+[Web Request      ( ea8: a08)] "GET /5b1ZeDe5KgQFm2e88IuM_a/cm.gif?type=wwwerror&terminal=www"   
+[Network Analyzer ( ea8: a08)]   (Sid: 38) Client -> Server @ : 545 bytes (SSL)(Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 38) Server -> Client : 233 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ea8: a08)]   (Sid: 35) Connection Terminated (by Client)
+[Network Analyzer ( ea8: a08)]   (Sid: 36) Connection Terminated (by Client)
+[Network Analyzer ( ea8: a08)]   (Sid: 37) Connection Terminated (by Client)
+[Network Analyzer ( ea8: a08)]   (Sid: 28) Connection Terminated (by Server)
+[Network Analyzer ( ea8: a08)]   (Sid: 27) Connection Terminated (by Server)

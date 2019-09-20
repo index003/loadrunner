@@ -12,6 +12,35 @@ Action()
     char nameVar[100];
  
     char nameValue[100];
+    
+    
+    int result;
+
+    char tmps[20];
+
+    char string1[] = "The quick brown dog jumps over the lazy fox";
+
+    char string2[] = "The QUICK brown dog jumps over the lazy fox";
+
+    result = strcmp( string1, string2); // Case-sensitive comparison 
+
+    if(result > 0)
+
+        strcpy(tmps, "greater than");
+
+    else if(result < 0)
+
+        strcpy(tmps, "less than");
+
+    else
+
+        strcpy(tmps, "equal to");
+
+    lr_output_message ("strcmp: String 1 is %s string 2", tmps);
+
+
+
+
 
 	lr_output_message( "#%s", lr_eval_string( "{testData}" ) );
     //lr_output_message( "We are on iteration #%s", lr_eval_string( "{iteration}" ) );
@@ -40,6 +69,7 @@ Action()
   
     lr_save_string("3","name_count");//定义数组长度
  
+
  
     for(num=1;num<=atoi(lr_eval_string("{name_count}"));num++){
 

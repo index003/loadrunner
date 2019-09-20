@@ -1,0 +1,313 @@
+var actionType;
+var fileList = new Array();
+var tempRespId = null;
+$(function() {
+	
+	 $('#askRecordTable').datagrid({
+			width: (1000*0.99),
+			height:(500*0.99),
+			iconCls : 'icon-save',
+			fitColumns : true,
+			striped : true,
+			idField : 'askpId',
+			singleSelect:true,
+			url : 'fsAskpriceWait.do',
+			queryParams : {
+				"method" : "getAskRecordByCode",
+				"askCode":''
+			},
+			onBeforeLoad : function() {
+				$('#askRecordTable').datagrid('clearSelections');
+			},
+			onLoadSuccess:function(data0){},
+			loadMsg : '数据加载,中请稍后......',
+			pagination : false,
+			rownumbers : true,
+			sortName : 'askpTime',
+			sortOrder : 'desc',
+			frozenColumns : [ [ 
+	            {field : 'ck',checkbox : true,align : 'center'} 
+	        ] ],
+			columns : [ [ 
+	  
+	            {field : 'askpModelName',title : '车辆款型',width : fillsize(0.50),align : 'center',
+	            	formatter: function(value,row,index){
+	            		return row.askpTypeName+" "+value;
+	            	}	
+	            },
+	            {field : 'askpState',title : '询价状态',width : fillsize(0.10),align : 'center',
+	            	formatter:function(value,row,index){return fmtAskpriceStateSlc(value,row,index)}
+	            },
+	            {field : 'askpTime',title : '询价时间',width : fillsize(0.3),align : 'center'}
+			] ]
+		});
+	 
+	 $('#fsAskPrice').datagrid({
+		title : '请报价',
+		width: ($(window).width()*0.99),
+		height:($(window).height()*0.98),
+		iconCls : 'icon-save',
+		fitColumns : true,
+		striped : true,
+		idField : 'askpId',
+		url : 'fsAskPrice.do',
+		queryParams : {
+			"method" : "getDtoPageData"
+		},
+		onLoadSuccess:function(data){
+			var rows=data.rows;
+			var len=rows.length;
+			for(var i=0;i<len;i++){
+				getDeadTime(rows[i].askpId);
+			}
+		},
+		onBeforeLoad : function() {
+			$('#fsAskPrice').datagrid('clearSelections');
+		},
+		loadMsg : '数据加载,中请稍后......',
+		pagination : true,
+		rownumbers : true,
+		sortName : 'updateTime',
+		sortOrder : 'desc',
+		frozenColumns : [ [ 
+            {field : 'ck',checkbox : true,align : 'center'} 
+        ] ],
+		columns : [ [ 
+            {field : 'askpCode',title : '询价单编号',width : fillsize(0.25),align : 'center',
+		    	formatter: function(value,row,index){
+				return '<a href="#" onclick="javascript:lookAskprice(\''+row.askpId+'\');">（查看）'+value+'</a>';
+			}},
+            {field : 'askpUserName',title : '询价用户',width : fillsize(0.15),align : 'center',
+            	formatter: function(value,row,index){
+        			return '<a href="#" onclick="javascript:lookAskRecord(\''+row.askpUser+'\');">'+value+'(查看历史询价)</a>';
+            	}
+            },
+            {field : 'askpModelName',title : '意向车型',width : fillsize(0.40),align : 'center',
+            	formatter: function(value,row,index){
+            		return row.askpTypeName+" "+value;
+            	}
+            },
+            {field : 'askpOutColor',title : '外观颜色',width : fillsize(0.10),align : 'center'}, 
+//            {field : 'askpLicense',title : '牌照',width : fillsize(0.15),align : 'center',
+//            	formatter: function(value,row,index){
+//            		return fmtAskpLicenseTypeSlc(value,row,index);
+//	        	}
+//            },
+//            {field : 'askpIsfree',title : '询价类型',width : fillsize(0.12),align : 'center',
+//            	formatter: function(value,row,index){
+//            		return fmtAskpIsFree(value,row,index);
+//	        	}
+//            },
+            {field : 'empPost',title : '报价剩余时间',width : fillsize(0.25),align : 'center',
+        		formatter: function(value,row,index){
+					return '<div id="time_'+row.askpId+'"></div>';
+				}
+	        },
+            {field : 'askpTime',title : '询价时间',width : fillsize(0.15),align : 'center'},
+            {field : 'respondUser',title : '状态',width : fillsize(0.20),align : 'center',
+            	formatter: function(value,row,index){
+            		if(isNullStr(value)){
+            			return "<a href='#' onclick=\"toRespond('"+row.askpId+"')\" class='easyui-linkbutton'  iconCls='icon-search'>去报价</a>" ;
+            		}else{
+            			return value+'正在操作';
+            		}
+            		
+	    			
+	    		}
+            }
+		] ],
+		toolbar:'#tb'
+	});
+	
+	//窗口显示定义
+	$('#detailDlg').dialog({
+		 width:600, 
+		 height:500, 
+		 iconCls:'icon-save',
+		 closed: true,  
+	     modal:true,
+	     resizable:true,
+	     buttons:[{ 
+			text:'关闭',
+			iconCls:'icon-no',
+			handler:function(){
+				$('#detailDlg').dialog('close');
+			}
+		}],
+		onOpen:function(){
+		},
+		onClose:function(){
+		}
+	});
+	
+	$('#askRecordDlg').dialog({
+		 width:1000, 
+		 height:500, 
+		 iconCls:'icon-save',
+		 closed: true,  
+	     modal:true,
+	     resizable:true,
+	     buttons:[{ 
+			text:'关闭',
+			iconCls:'icon-no',
+			handler:function(){
+				$('#askRecordDlg').dialog('close');
+			}
+		}],
+		onOpen:function(){
+		},
+		onClose:function(){
+		}
+	});
+	
+	$("#searchButton").bind('click',function(){
+		var askpCode=$("#askpCode").val();
+		var askpUserName = $("#askpUserName").val();
+		var modelType=$("#smodelType").combobox('getValue');
+		var obj={};
+		obj.method='getDtoPageData';
+		if(!isNullStr(askpCode)){
+			obj.askpCode=askpCode;
+		}
+		if(!isNullStr(askpUserName)){
+			obj.askpUserName = askpUserName;
+		}
+		if(!isNullStr(modelType)){
+			obj.modelType=modelType;
+		}
+		$('#fsAskPrice').datagrid('load', obj);
+	});
+	
+	$("#smodelType").combobox({   
+		url:'fsRespond.do?method=getSelectCarType',
+		editable:false,
+	    valueField:'typeId',   
+	    textField:'typeName'  
+	});
+	
+});
+//点击去报价按钮 执行此方法
+function toRespond(id){
+	$.ajax({
+		type:'post',
+		url:'fsAskPrice.do',
+		async: false,
+		data:'method=setRespondUser&askpId='+id,
+		success:function(data){
+			var data=eval('(' + data + ')'); 
+			if(data.flag){
+				window.location.href="fsRespond.do?method=getAskById&askId="+id;
+			}else{
+				 $.messager.alert('提示',data.msg,'warning');
+				return false;
+			}
+		}
+	});
+	
+	
+}
+
+function lookAskprice(askpId){
+	lookDeatil(askpId);
+	$('#detailDlg').dialog({title:'查看记录'});
+	$('#detailDlg').dialog('open');
+}
+
+
+function getDeadTime(id){
+	var time,useTime;
+	var startTime=new Date();
+	$.ajax({
+		type:'post',
+		url:'fsAskPrice.do',
+		async: false,
+		data:'method=getDeadTime&uid='+id,
+		success:function(data){
+			var data = eval('(' + data + ')'); 
+			 if(data.flag){
+				 useTime=new Date().getTime()-startTime.getTime();
+				 time=data.time;
+				 time=time-useTime;
+				 var d , h , m , s, finished;
+				 $('div#time_'+id).countdown(time + new Date().valueOf(), function(event){
+					 var timeFormat = '剩余 ';
+						$this = $(this);
+						switch (event.type) {
+						case "days":
+							d = event.value;
+							break;
+						case "hours":
+							h = event.value;
+							break;
+						case "minutes":
+							m = event.value;
+							break;
+						case "seconds":
+							s = event.value;
+							break;
+						case "finished":
+							$this.fadeTo('slow', .5);
+							finished = true;
+							getDeadTimeCallback(id);
+							break;
+						}
+						if(d>0){
+							timeFormat+='<span class="hd_time"> %d</span>天<span class="hd_time"> %h</span>小时<span class="hd_time">%m</span>分<span class="hd_time">%s</span>秒';
+						}else{
+							timeFormat+='<span class="hd_time"> %h</span>小时<span class="hd_time">%m</span>分<span class="hd_time">%s</span>秒';
+						}
+						timeFormat = timeFormat.replace(/\%d/, d);
+						timeFormat = timeFormat.replace(/\%h/, h);
+						timeFormat = timeFormat.replace(/\%m/, m);
+						timeFormat = timeFormat.replace(/\%s/, s);
+						$(this).html(timeFormat);
+				 });
+		     } else{
+		    	 $.messager.alert('提示',data.msg,'warning');
+		     }
+		}
+	});
+}
+
+function getDeadTimeCallback(askpId){
+	$("a[name='searchA"+askpId+"']").hide();
+	$(".appoint"+askpId).hide();
+//	location.reload();
+}
+
+
+function lookAskRecord(askCode){
+	var obj={};
+	obj.askCode=askCode;
+	obj.method='getAskRecordByCode';
+	$('#askRecordTable').datagrid('load', obj);
+	$('#askRecordDlg').dialog({title:'询价记录'});
+	$('#askRecordDlg').dialog('open');
+	return false;
+}
+
+function lookDeatil(id){
+	$.ajax({
+		type:'get',
+		url:'fsAskPrice.do',
+		async: false,
+		data:'method=getRecordById&askpId='+id,
+		success:function(data){
+			var data = eval('(' + data + ')');
+			 if(data[0]!=null){
+				 for(i in data[0]){
+					 if( i=='askpInsurance'){
+						 data[0][i]=fmtInsurce(data[0][i]);
+					 }
+					$("#look_"+i).html(data[0][i]);
+				 }
+				 
+				 for(i in data[1]){
+					 $("#look_"+i).html(data[1][i]);
+				 }
+		     } else{
+		    	   $.messager.alert('提示',"系统错误，请稍后再试！",'warning');
+		     }
+		}
+	});
+}

@@ -1,0 +1,17 @@
+[t7]
+URL3=http://127.0.0.1:1080/WebTours/home.html
+SnapshotXmlFile=snapshot_7.xml
+ContentType=text/html
+StepName=Image: SignOff Button
+Total=3
+FileName1=t7.html
+FileName3=t7f1.html
+FileName2=t7f0.html
+RequestHeaderFile=t7_RequestHeader.txt
+UseFrameIndex=1
+ResponseHeaderFile=t7_ResponseHeader.txt
+FrameIndex2=0.0
+FrameIndex3=0.1
+RequestBodyFile=t7_RequestBody.txt
+URL1=http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=1
+URL2=http://127.0.0.1:1080/cgi-bin/nav.pl?in=home

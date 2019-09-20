@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0"?>
-  <!DOCTYPE Report
+<!DOCTYPE Report
 [
 <!ELEMENT Report (General ,(Doc|BPT)) >
 <!ATTLIST Report ver CDATA #REQUIRED tmZone CDATA #REQUIRED>
@@ -7,10 +7,10 @@
 <!ELEMENT General ( DocLocation ) >
 <!ATTLIST General productName CDATA #REQUIRED productVer CDATA #REQUIRED os CDATA #REQUIRED host CDATA #REQUIRED>
 
-<!ELEMENT BPT (DName,Res,DVer?,TSet?,TInst?,NodeArgs,Doc*) >
+<!ELEMENT BPT (DName,Res,DVer?,TSet?,TInst?,NodeArgs,AdditionalInfo*,Doc*) >
 <!ATTLIST BPT rID ID #REQUIRED >
 
-<!ELEMENT Doc (DName, Res, DVer?, TSet?, TInst?, RunType?, DT?, Step*, Action+, DIter*, Action*, Summary?, NodeArgs?)> 
+<!ELEMENT Doc (DName,Res,DVer?,TSet?,TInst?,RunType?,DT?,AdditionalInfo*,Step*,DIter*,Step*,Action*,Summary?,TestMaintenanceSummary*,NodeArgs?) >
 <!ATTLIST Doc rID ID #REQUIRED type (Test|BC) "Test" productName CDATA #REQUIRED BCIter CDATA #IMPLIED >
 
 <!ELEMENT RunType ( #PCDATA )>
@@ -19,6 +19,12 @@
 <!ELEMENT DName ( #PCDATA ) >
 
 <!ELEMENT Res ( #PCDATA ) >
+
+<!ELEMENT AdditionalInfo (AdditionalDataName,AdditionalDataValue ) >
+
+<!ELEMENT AdditionalDataName ( #PCDATA ) >
+
+<!ELEMENT AdditionalDataValue ( #PCDATA ) >
 
 <!ELEMENT DVer ( #PCDATA ) >
 
@@ -31,13 +37,34 @@
 
 <!ELEMENT DocLocation ( #PCDATA )>
 
-<!ELEMENT Action (AName,AIter*,(Step|HtmlStep|Action)*,Summary,NodeArgs) >
+<!ELEMENT Action (AName,AIter*,(Step|HtmlStep|Action)*,Summary,ActionMaintenanceSummary*,NodeArgs ) >
 <!ATTLIST Action rID ID #REQUIRED>
 
 <!ELEMENT AIter ((Step|HtmlStep|Action)*,Summary?,NodeArgs) >
 <!ATTLIST AIter rID ID #REQUIRED iterID CDATA #REQUIRED>
 
 <!ELEMENT AName ( #PCDATA ) >
+
+<!ELEMENT TestMaintenanceSummary (ActionMaintenanceSummary) >
+<!ATTLIST TestMaintenanceSummary ObjectsAdded CDATA #REQUIRED ObjectsUpdated CDATA #REQUIRED StepsUpdated CDATA #REQUIRED StepsComments CDATA #REQUIRED><!ELEMENT ActionMaintenanceSummary (ObjectChange* ) >
+<!ATTLIST ActionMaintenanceSummary Action CDATA #REQUIRED Objects CDATA #REQUIRED Updated CDATA #REQUIRED LinesTotal CDATA #REQUIRED Added CDATA #REQUIRED LinesUpdated CDATA #REQUIRED>
+
+<!ELEMENT ObjectChange  (Hierarchy, PropertyChangeList* ) >
+<!ATTLIST ObjectChange Operation CDATA #IMPLIED OriginalRepository CDATA #IMPLIED>
+
+<!ELEMENT PropertyChangeList (PropertyDef) >
+
+<!ELEMENT PropertyDef (OriginalValue, NewValue) >
+<!ATTLIST PropertyDef PropName CDATA #REQUIRED OriginRegularExpression (True|False) "False" NewRegularExpression (True|False) "False" >
+
+<!ELEMENT OriginalValue ( #PCDATA )>
+
+<!ELEMENT NewValue ( #PCDATA )>
+
+<!ELEMENT Hierarchy  (ObjectName, Hierarchy*) >
+<!ATTLIST Hierarchy MicClass CDATA #REQUIRED>
+
+<!ELEMENT ObjectName  ( #PCDATA ) >
 
 <!ELEMENT Step (Obj,Details,Time,(Step|HtmlStep|Doc)*,NodeArgs) >
 <!ATTLIST Step rID ID #REQUIRED retval CDATA #IMPLIED>
@@ -60,7 +87,7 @@
 <!ELEMENT NodeArgs (Disp,TopPane?,BtmPane?)>
 <!ATTLIST NodeArgs eType CDATA #REQUIRED icon CDATA #REQUIRED nRep CDATA #REQUIRED filter (False|True) "True">
 <!ATTLIST NodeArgs status (Passed|Failed|Done|Warning|Information) "Done">
-<!ATTLIST NodeArgs iconSel CDATA #IMPLIED nType CDATA #IMPLIED >
+<!ATTLIST NodeArgs iconSel CDATA #IMPLIED nType CDATA #IMPLIED MovieMarker CDATA "">
 
 <!ELEMENT TopPane (Path)>
 
@@ -87,14 +114,15 @@
 <!ELEMENT ParamVal ( #PCDATA ) >
 
 ]
-> <Report ver="2.0" tmZone="中国标准时间">
-<General productName="Vugen" productVer="11" os="" host="PC-20190621001"><DocLocation><![CDATA[D:\lrScript\GeneralTest]]></DocLocation></General>
+>
+<Report ver="2.0" tmZone="中国标准时间">
+<General productName="Vugen" productVer="12" os="" host="PC-20190621001"><DocLocation><![CDATA[D:\lrScript\GeneralTest]]></DocLocation></General>
 <Doc rID="T1"   productName= "Vugen"  >
 <DName><![CDATA[GeneralTest]]></DName>
 <Res><![CDATA[result1]]></Res>
 <Action rID="T2">
 <AName><![CDATA[vuser_init]]></AName>
-<Summary sTime="2019/9/17 - 18:55:44" eTime="2019/9/17 - 18:55:44" passed="0" failed="0" warnings="0" ></Summary>
+<Summary sTime="2019/9/20 - 12:02:21" eTime="2019/9/20 - 12:02:21" passed="0" failed="0" warnings="0" ></Summary>
 <NodeArgs eType="StartAction" icon="2" nRep="5" >
 <Disp><![CDATA[vuser_init Summary]]></Disp>
 </NodeArgs>
@@ -102,7 +130,7 @@
 <DIter rID="T3" iterID="1" >
 <Action rID="T4">
 <AName><![CDATA[Action]]></AName>
-<Summary sTime="2019/9/17 - 18:55:44" eTime="2019/9/17 - 18:55:44" passed="0" failed="0" warnings="0" ></Summary>
+<Summary sTime="2019/9/20 - 12:02:21" eTime="2019/9/20 - 12:02:21" passed="0" failed="0" warnings="0" ></Summary>
 <NodeArgs eType="StartAction" icon="2" nRep="8" >
 <Disp><![CDATA[Action Summary]]></Disp>
 </NodeArgs>
@@ -113,12 +141,12 @@
 </DIter>
 <Action rID="T5">
 <AName><![CDATA[vuser_end]]></AName>
-<Summary sTime="2019/9/17 - 18:55:44" eTime="2019/9/17 - 18:55:44" passed="0" failed="0" warnings="0" ></Summary>
+<Summary sTime="2019/9/20 - 12:02:21" eTime="2019/9/20 - 12:02:21" passed="0" failed="0" warnings="0" ></Summary>
 <NodeArgs eType="StartAction" icon="2" nRep="11" >
 <Disp><![CDATA[vuser_end Summary]]></Disp>
 </NodeArgs>
 </Action>
-<Summary sTime="2019/9/17 - 18:55:44" eTime="2019/9/17 - 18:55:44" passed="0" failed="0" warnings="0" ></Summary>
+<Summary sTime="2019/9/20 - 12:02:21" eTime="2019/9/20 - 12:02:21" passed="0" failed="0" warnings="0" ></Summary>
 <NodeArgs eType="StartTest" icon="1" nRep="4" >
 <Disp><![CDATA[Test GeneralTest Summary]]></Disp>
 </NodeArgs>

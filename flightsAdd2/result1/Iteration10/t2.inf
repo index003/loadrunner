@@ -1,0 +1,17 @@
+[t2]
+URL3=http://127.0.0.1:1080/cgi-bin/login.pl?intro=true
+SnapshotXmlFile=snapshot_2.xml
+ContentType=text/html
+StepName=Submit Data: login.pl
+Total=3
+FileName1=t2.html
+FileName3=t2f1.html
+FileName2=t2f0.html
+RequestHeaderFile=t2_RequestHeader.txt
+UseFrameIndex=1
+ResponseHeaderFile=t2_ResponseHeader.txt
+FrameIndex2=0.0
+FrameIndex3=0.1
+RequestBodyFile=t2_RequestBody.txt
+URL1=http://127.0.0.1:1080/cgi-bin/login.pl
+URL2=http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=home

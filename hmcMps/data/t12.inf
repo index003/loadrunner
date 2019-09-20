@@ -1,0 +1,13 @@
+[t12]
+FileName1=t12.htm
+URL1=https://z7.cnzz.com/stat.htm?id=1262932335&r=&lg=zh-cn&ntime=none&cnzz_eid=438912350-1568886028-&showp=1920x1080&p=http%3A%2F%2Fmps-test.haomaiche.com%2Ffs%2Findex.html&t=4S%E5%BA%97%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E7%99%BB%E5%BD%95%E7%95%8C%E9%9D%A2&umuuid=16d492b3fd41bf-09b093332a586-26596859-1fa400-16d492b3fd51ca&h=1&rnd=668763734
+Total=2
+RequestHeaderFile=t12_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t12_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_12.xml
+FileName2=t12_9.gif
+URL2=https://cnzz.mmstat.com/9.gif?abc=1&rnd=1903752157
+[ProtocolInfo]
+ProtocolId=QTWeb

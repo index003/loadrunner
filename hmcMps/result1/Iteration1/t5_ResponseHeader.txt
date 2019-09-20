@@ -1,0 +1,12 @@
+HTTP/1.1 200 OK
+Server: nginx/1.10.2
+Date: Thu, 19 Sep 2019 11:00:05 GMT
+Content-Type: text/html;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Pragma: no-cache
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Cache-Control: no-cache, must-revalidate
+Set-Cookie: rememberMe=deleteMe; Path=/; Max-Age=0; Expires=Wed, 18-Sep-2019 11:00:05 GMT
+Set-Cookie: SHAREJSESSIONID=45f7c0ae-2eab-484a-a53f-db7120d1e55f; Path=/; HttpOnly
+

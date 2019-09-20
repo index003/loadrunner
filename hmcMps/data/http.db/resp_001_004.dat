@@ -1,0 +1,15 @@
+@CHARSET "UTF-8";
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,blockquote{margin:0;padding:0}
+table,td,tr,th{font-size:12px}
+body{font-family:"微软雅黑";font-size:12px;color:#444}
+img{border:0}
+.fromTable{width:100%}
+.fromTable input{width:220px}
+.fromTable tr td{padding:5px;line-height:20px}
+.fromTable .leftTd{width:30%;text-align:left}
+.fromTable .rightTd{width:70%;text-align:left}
+.hide{display:none}
+.clean{float:none;clear:both}
+.red{color:red}
+.green{color:green}
+.clear{clear:both}

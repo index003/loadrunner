@@ -1,0 +1,977 @@
+//产地
+function setTypeOriginSlc(id){
+	$("#"+id).append('<option value="1">自主</option><option value="2">合资</option><option value="3">进口</option>');
+	$("#"+id).combobox({editable:false});
+}
+
+function fmtGetType(value,row,index){
+	switch(value){
+	case '4':
+		return "询价单";
+	case '5':
+		return "系统下发";
+	case '6':
+		return "特价车";
+	case '7':
+		return "二手车";
+	default:
+		return value;
+	}
+}
+
+function fmtAskpClass(value,row,index){
+	switch(value){
+	case 0:
+		return "免费询价";
+	case 1:
+		return "<font color='red'>竞价购车</font>";
+	case 2:
+		return "免费询价";
+	case 3:
+		return "免费询价";
+	default:
+		return value;
+	}
+}
+function fmtAskpbuyarea(value,row,index){
+	switch(value){
+	case '二周内':
+		return "H";
+	case '一个月内':
+		return "A";
+	case '三个月内':
+		return "B";
+	case '三个月以后':
+		return "C";
+	default:
+		return "C";
+	}
+}
+
+
+function fmtAskpIswx(value,row,index){
+	switch(value){
+	case '0':
+		return "网页询价";
+	case '1':
+		return "微信询价";
+	case '2':
+		return "移动询价";
+	default:
+		return value;
+	}
+}
+
+function fmtRespondIswx(value,row,index){
+	switch(value){
+	case 0:
+		return "PC报价";
+	case 1:
+		return "微信报价";
+	case 2:
+		return "移动报价";
+	case 3:
+		return "自动报价";
+	case 4:
+		return "APP报价";
+	default:
+		return value;
+	}
+}
+
+
+
+function fmtUserType(value,row,index){
+	switch(value){
+	case '0':
+		return "PC用户";
+	case '1':
+		return "微信用户";
+	case '2':
+		return "移动用户";
+	case '3':
+		return "来电咨询";
+	default:
+		return value;
+	}
+}
+
+//产地格式化
+function fmtTypeOriginSlc(value,row,index){
+	switch(value){
+	case "1":
+		return "自主";
+	case "2":
+		return "合资";
+	case "3":
+		return "进口";
+	default:
+		return "";
+	}
+}
+//特价车格式化
+function fmtCarSpecial(value,row,index){
+	switch(value){
+	case "hide":
+		return "未审核";
+	case "init":
+		return "已审核";
+	case "show":
+		return "首页展示";
+	default:
+		return "";
+	}
+}
+//设置4S店信息 是否隐藏
+function setFsInfoStateSlc(id){
+	$("#"+id).append('<option value="init">是</option><option value="disa">否</option>');
+	$("#"+id).combobox({editable:false});
+}
+
+//品牌分类
+function setBrandTypeSlc(id){
+	$("#"+id).append('<option value="1">合资车品牌</option><option value="2">进口车品牌</option><option value="3">豪华车品牌</option>');
+	$("#"+id).combobox({editable:false});
+}
+
+//品牌分类格式化
+function fmtBrandTypeSlc(value,row,index){
+	switch(value){
+		case "1":
+			return "合资车品牌";
+		case "2":
+			return "进口车品牌";
+		case "3":
+			return "豪华车品牌";
+		default:
+			return "";
+	}
+}
+
+//车辆分类
+function setModelCategorySlc(id){
+	$("#"+id).append('<option value="1">两厢轿车</option><option value="2">三厢轿车</option><option value="3">掀背车</option>'+
+			'<option value="4">SUV</option><option value="5">MPV</option><option value="6">跨界车</option>'+
+			'<option value="7">轿跑车</option><option value="8">跑车</option><option value="9">敞篷车</option>');
+	$("#"+id).combobox({editable:false});
+}
+
+//车辆分类格式化
+function fmtModelCategorySlc(value,row,index){
+	switch(value){
+		case "1":
+			return "两厢轿车";
+		case "2":
+			return "三厢轿车";
+		case "3":
+			return "掀背车";
+		case "4":
+			return "SUV";
+		case "5":
+			return "MPV";
+		case "6":
+			return "跨界车";
+		case "7":
+			return "轿跑车";
+		case "8":
+			return "跑车";
+		case "9":
+			return "敞篷车";
+		default:
+			return "";
+	}
+}
+
+//座位数
+function setSeatSlc(id){
+	$("#"+id).append('<option value="2">2</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option>');
+	$("#"+id).combobox({editable:false});
+}
+
+//车门数
+function setDoorSlc(id){
+	$("#"+id).append('<option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option>');
+	$("#"+id).combobox({editable:false});
+}
+
+//车顶型式
+function setRoofSlc(id){
+	$("#"+id).append('<option value="1">硬顶</option><option value="2">硬顶敞篷</option><option value="3">软顶敞篷</option>');
+	$("#"+id).combobox({editable:false});
+}
+
+//车顶型式格式化
+function fmtRoofSlc(value,row,index){
+	switch(value){
+		case "1":
+			return "硬顶";
+		case "2":
+			return "硬顶敞篷";
+		case "3":
+			return "软顶敞篷";
+		default:
+			return "";
+	}
+}
+
+//驱动方式
+function setDriveSlc(id){
+	$("#"+id).append('<option value="1">前置前驱</option><option value="2">前置后驱</option><option value="3">全时四驱</option>'+
+			'<option value="4">分时四驱</option><option value="5">适时四驱</option><option value="6">中置后驱</option><option value="7">后置后驱</option>'+
+			'<option value="8">后置四驱</option><option value="9">前置四驱</option><option value="10">中置四驱</option>');
+	$("#"+id).combobox({editable:false});
+}
+
+//驱动方式格式化
+function fmtDriveSlc(value,row,index){
+	switch(value){
+		case "1":
+			return "前置前驱";
+		case "2":
+			return "前置后驱";
+		case "3":
+			return "全时四驱";
+		case "4":
+			return "分时四驱";
+		case "5":
+			return "适时四驱";
+		case "6":
+			return "中置后驱";
+		case "7":
+			return "后置后驱";
+		default:
+			return "";
+	}
+}
+
+//发动机型式
+function setEngineSlc(id){
+	$("#"+id).append('<option value="L3">L型3缸</option><option value="L4">L型4缸</option><option value="L5">L型5缸</option>'+
+			'<option value="L6">L型6缸</option><option value="V6">V型6缸</option><option value="V8">V型8缸</option>'+
+			'<option value="V10">V型10缸</option><option value="V12">V型12缸</option><option value="W12">W型12缸</option>'+
+			'<option value="H4">H型4缸</option><option value="H6">H型6缸</option><option value="ZZ">转子发动机</option>');
+	$("#"+id).combobox({editable:false});
+}
+
+//发动机型式格式化
+function fmtEngineSlc(value,row,index){
+	switch(value){
+		case "L3":
+			return "L型3缸";
+		case "L4":
+			return "L型4缸";
+		case "L5":
+			return "L型5缸";
+		case "L6":
+			return "L型6缸";
+		case "V6":
+			return "V型6缸";
+		case "V8":
+			return "V型8缸";
+		case "V10":
+			return "V型10缸";
+		case "V12":
+			return "V型12缸";
+		case "W12":
+			return "W型12缸";
+		case "H4":
+			return "H型4缸";
+		case "H6":
+			return "H型6缸";
+		case "ZZ":
+			return "转子发动机";
+		default:
+			return "";
+	}
+}
+
+//进气方式
+function setAirSlc(id){
+	$("#"+id).append('<option value="1">自然吸气</option><option value="2">涡轮增压</option><option value="3">机械增压</option>'+
+			'<option value="4">双增压</option>');
+	$("#"+id).combobox({editable:false});
+}
+
+//进气方式格式化
+function fmtAirSlc(value,row,index){
+	switch(value){
+		case "1":
+			return "自然吸气";
+		case "2":
+			return "涡轮增压";
+		case "3":
+			return "机械增压";
+		case "4":
+			return "双增压";
+		default:
+			return "";
+	}
+}
+
+//挡位数
+function setGearSlc(id){
+	$("#"+id).append('<option value="4">4</option><option value="5">5</option><option value="6">6</option>'+
+			'<option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="0">0</option>');
+	$("#"+id).combobox({editable:false});
+}
+
+//变速箱
+function setGearboxSlc(id){
+	$("#"+id).append('<option value="1">手动</option><option value="2">自动</option><option value="3">手自一体</option>'+
+	'<option value="4">双离合</option><option value="5">无级变速</option><option value="6">半自动</option>');
+	$("#"+id).combobox({editable:false});
+}
+
+//变速箱格式化
+function fmtGearboxSlc(value,row,index){
+	switch(value){
+		case "1":
+			return "手动";
+		case "2":
+			return "自动";
+		case "3":
+			return "手自一体";
+		case "4":
+			return "双离合";
+		case "5":
+			return "无级变速";
+		case "6":
+			return "半自动";
+		default:
+			return "";
+	}
+}
+
+//车型图片分类
+function setTypePicSlc(id){
+	$("#"+id).append('<option value="1">外观</option><option value="2">中控</option><option value="3">座椅</option>'+
+	'<option value="4">其它</option><option value="5">封面图</option><option value="6">大图</option><option value="7">1242*783</option>');
+	$("#"+id).combobox({editable:false});
+}
+
+//车型图片分类格式化
+function fmtTypePicSlc(value,row,index){
+	switch(value){
+		case "1":
+			return "外观";
+		case "2":
+			return "中控";
+		case "3":
+			return "座椅";
+		case "4":
+			return "其它";
+		case "5":
+			return "封面图";
+		case "6":
+			return "大图";
+		case "7":
+			return "1242*783";
+		default:
+			return "";
+	}
+}
+
+//网站用户状态
+function setUserStateSlc(id){
+	$("#"+id).append('<option value="init">正常</option><option value="disa">禁用</option>');
+	$("#"+id).combobox({editable:false});
+}
+
+//网站用户状态格式化
+function fmtUserStateSlc(value,row,index){
+	switch(value){
+		case "init":
+			return '<font color="green" >正常</font>';
+		case "disa":
+			return '<font color="red">禁用</font>';
+		default:
+			return "";
+	}
+}
+
+//4S店所提供服务
+function setFsServiceSlc(id){
+	$("#"+id).append('<option value="1">整车销售</option><option value="2">售后维修</option><option value="3">保险理赔</option>'+
+			'<option value="4">二手车置换</option><option value="5">金融贷款</option><option value="6">代办上牌</option>');
+	$("#"+id).combobox({multiple:true,editable:false});
+}
+
+
+//车型图片分类
+function setIntroTypeSlc(id){
+	$("#"+id).append('<option value="1">诚信资质</option><option value="2">店内特色</option><option value="3">商家展示</option>');
+	$("#"+id).combobox({editable:false});
+}
+
+//车型图片分类格式化
+function fmtIntroTypeSlc(value,row,index){
+	switch(value){
+		case "1":
+			return "诚信资质";
+		case "2":
+			return "店内特色";
+		case "3":
+			return "商家展示";
+		default:
+			return "";
+	}
+}
+
+//用户权限
+function setEmpPowerSlc(id){
+	$("#"+id).append('<option value="1">一级权限</option><option value="2">二级权限</option><option value="3">三级权限</option><option value="4">集团权限</option>');
+	$("#"+id).combobox({editable:false});
+}
+
+//用户权限格式化
+function fmtEmpPowerSlc(value,row,index){
+	switch(value){
+		case "1":
+			return "一级权限";
+		case "2":
+			return "二级权限";
+		case "3":
+			return "三级权限";
+		case "4":
+			return "集团权限";
+		default:
+			return "";
+	}
+}
+
+//站内信息状态格式化
+function fmtLetterIscheckSlc(value,row,index){
+	switch(value){
+		case "0":
+			return '已读';
+		case "1":
+			return '未读';
+		default:
+			return "";
+	}
+}
+
+//赠品信息状态
+function setGiftStateSlc(id){
+	$("#"+id).append('<option value="">请选择</option><option value="1">未领取</option><option value="0">已领取</option>');
+	$("#"+id).combobox({editable:false});
+}
+
+//赠品信息状态格式化
+function fmtGiftStatekSlc(value,row,index){
+	switch(value){
+		case "0":
+			return '已领取';
+		case "1":
+			return '未领取';
+		default:
+			return value;
+	}
+}
+
+//申请退款信息状态
+function setApplyStateSlc(id){
+	$("#"+id).append('<option value="">请选择</option><option value="0">未处理</option><option value="1">已处理</option>');
+	$("#"+id).combobox({editable:false});
+}
+
+//申请退款信息状态格式化
+function fmtApplyStatekSlc(value,row,index){
+	switch(value){
+		case "0":
+			return '未处理';
+		case "1":
+			return '已处理';
+		default:
+			return value;
+	}
+}
+
+//父级定义
+function setTypeParentSlc(id){
+	$("#"+id).append('<option value="">请选择</option><option value="TYPEPARENT001">购买必读</option><option value="TYPEPARENT002">帮助中心</option><option value="TYPEPARENT003">关于我们</option>');
+	$("#"+id).combobox({editable:false});
+}
+
+//父级定义格式化
+function fmtTypeParentSlc(value,row,index){
+	switch(value){
+		case "TYPEPARENT001":
+			return '购买必读';
+		case "TYPEPARENT002":
+			return '帮助中心';
+		case "TYPEPARENT003":
+			return '关于我们';
+		default:
+			return value;
+	}
+}
+
+//数据状态格式化
+function fmtDataStateSlc(value,row,index){
+	switch(value){
+		case "init":
+			return '初始化';
+		case "del":
+			return '删除';
+		default:
+			return value;
+	}
+}
+
+//文章-类型定义
+function setArticleCategorySlc(id){
+	$("#"+id).append('<option value="">请选择</option><option value="ARTICLECATEGORY001">原创</option><option value="ARTICLECATEGORY002">引用</option>');
+	$("#"+id).combobox({editable:false});
+}
+
+//文章-类型定义格式化
+function fmtArticleCategorySlc(value,row,index){
+	switch(value){
+		case "ARTICLECATEGORY001":
+			return '原创';
+		case "ARTICLECATEGORY002":
+			return '引用';
+		default:
+			return "";
+	}
+}
+
+//文章-前台显示
+function fmtArticleIsShowSlc(value,row,index){
+	switch(value){
+		case "init":
+			return '是';
+		case "hide":
+			return '否';
+		default:
+			return "";
+	}
+}
+
+//所属分类
+function fmtLoanSlc(value,row,index){
+	switch(value){
+		case "model":
+			return '是';
+		case "type":
+			return '否';
+		default:
+			return "";
+	}
+}
+
+//网站点评状态
+function setCommentStateSlc(id){
+	$("#"+id).append('<option value="">请选择</option><option value="init">初始状态</option><option value="1">已领取</option><option value="hide">前台隐藏</option>');
+	$("#"+id).combobox({editable:false});
+}
+
+//网站点评状态格式化
+function fmtCommentStateSlc(value,row,index){
+	switch(value){
+		case "init":
+			return '<font color="green" >初始状态</font>';
+		case "1":
+			return '<font color="green" >已领取</font>';
+		case "hide":
+			return '<font color="red">前台隐藏</font>';
+		default:
+			return "";
+	}
+}
+
+//询价状态
+function setAskpriceStateSlc(id){
+	$("#"+id).append('<option value="">请选择</option><option value="1">待付诚意金</option><option value="2">等待报价</option>'+
+			'<option value="3">已报价</option><option value="14">已查阅</option><option value="13">已联系</option> <option value="15">待联系</option><option value="4">考虑中</option><option value="5">已下订</option><option value="6">已到店</option>'+
+			'<option value="7">用户违约</option><option value="8">4S店违约</option><option value="9">已提车</option><option value="10">等待指定报价时间</option>');
+	$("#"+id).combobox({editable:false});
+}
+
+//询价状态格式化
+function fmtAskpriceStateSlc(value,row,index){
+	switch(value){
+		case "1":
+			return '<font color="black" >待付诚意金</font>';
+		case "2":
+			return '<font color="blue">等待报价</font>';
+		case "3":
+			return '<font color="green" >已报价</font>';
+		case "4":
+			return '<font color="black">考虑中</font>';
+		case "5":
+			return '<font color="blue" >已付款</font>';
+		case "6":
+			return '<font color="black">已到店</font>';
+		case "7":
+			return '<font color="red" >用户违约</font>';
+		case "8":
+			return '<font color="red">4S店违约</font>';
+		case "9":
+			return '<font color="black" >已提车</font>';
+		case "10":
+			return '<font color="blue" >等待指定报价时间</font>';
+		case "11":
+			return '<font color="black">考虑中</font>';
+		case "12":
+			return '<font color="black">考虑中</font>';
+		case "13":
+			return '<font color="black">已联系</font>';
+		case "14":
+			return '<font color="blue">已查阅</font>';
+		case "15":
+			return '<font color="blue">待联系</font>';
+		default:
+			return "";
+	}
+}
+
+//询价状态-Wait
+function setAskpriceWaitStateSlc(id){
+	$("#"+id).append('<option value="">请选择</option><option value="2">等待报价</option>'+
+			'<option value="3">已报价</option><option value="14">已查阅</option><option value="4">已过期</option><option value="5">已预约</option><option value="6">已下订</option>'+
+			'<option value="8">4S店违约</option><option value="13">已联系</option>');
+	$("#"+id).combobox({editable:false});
+}
+
+//询价状态格式化-Wait
+function fmtAskpriceWaitStateSlc(value,row,index){
+	switch(value){
+		case "1":
+			return '<font color="blue">等待报价</font>';
+		case "2":
+			return '<font color="red">超时未报价</font>';
+		case "3":
+			return '<font color="blue" >已报价</font>';
+		case "4":
+			return '<font color="red">已过期</font>';
+		case "5":
+			return '<font color="green" >已预约</font>';
+		case "6":
+			return '<font color="green">已成交</font>';
+		case "13":
+			return '<font color="blue">已联系</font>';
+		case "14":
+			return '<font color="blue">已查阅</font>';
+		default:
+			return "";
+	}
+}
+
+//报价状态
+function setRespondStateSlc(id){
+	$("#"+id).append('<option value="">请选择</option><option value="1">等待报价</option><option value="2">超时未报违约</option><option value="3">已报价</option>'+
+			'<option value="14">已查阅</option><option value="15">待联系</option><option value="4">战败</option><option value="5">考虑中</option><option value="6">流拍</option><option value="7">已下订</option>'+
+			'<option value="8">已到店</option><option value="9">用户违约</option><option value="10">4S违约</option><option value="11">已提车</option><option value="12">待审核</option><option value="13">已联系</option>');
+	$("#"+id).combobox({editable:false});
+}
+
+
+function fmtSpxStateSlc(value,row,index){
+	switch(value){
+	case "1":
+		return "代付款";
+	case "2":
+		return "超时未付款";
+	case "3":
+		return "线下预订";
+	case "4":
+		return "线上预订";
+	default:
+		return "";
+	}
+}
+
+//报价状态格式化
+function fmtRespondStateSlc(value,row,index){
+	switch(value){
+		case "1":
+			return '<font color="blue" >等待报价</font>';
+		case "2":
+			return '<font color="red">超时未报违约</font>';
+		case "3":
+			return '<font color="blue" >等待客户反馈</font>';
+		case "4":
+			return '<font color="green">战败</font>';
+		case "5":
+			return '<font color="black" >考虑中</font>';
+		case "6":
+			return '<font color="red">流拍</font>';
+		case "7":
+			return '<font color="blue" >已下订</font>';
+		case "8":
+			return '<font color="green">已到店</font>';
+		case "9":
+			return '<font color="red" >用户违约</font>';
+		case "10":
+			return '<font color="red" >4S违约</font>';
+		case "11":
+			return '<font color="black" >已提车</font>';
+		case "12":
+			return '<font color="blue" >待审核</font>';
+		case "13":
+			return '<font color="blue">已联系</font>';
+		case "14":
+			return '<font color="blue">已查阅</font>';
+		case "15":
+			return '<font color="blue">待联系</font>';
+		default:
+			return "";
+	}
+}
+
+// 订单状态
+function setOrderStateSlc(id){
+	$("#"+id).append('<option value="">请选择</option><option value="0">待付金</option><option value="1">已下订</option><option value="2">已到店</option><option value="3">用户违约</option><option value="4">4S违约</option><option value="5">已提车</option><option value="6">已联系</option>');
+	$("#"+id).combobox({editable:false});
+}
+
+//订单状态格式化
+function fmtOrderStateSlc(value,row,index){
+	switch(value){
+	   case "0":
+		return '<font color="blue" >待付金</font>';
+		case "1":
+			return '<font color="blue" >已下订</font>';
+		case "2":
+			return '<font color="green">已成交</font>';//已到店
+		case "3":
+			return '<font color="red" >用户违约</font>';
+		case "4":
+			return '<font color="red" >4S违约</font>';
+		case "5":
+			return '<font color="black" >已提车</font>';
+		case "6":
+			return '<font color="black" >已联系</font>';
+		default:
+			return "";
+	}
+}
+
+// 订单状态
+function setBreakStateSlc(id){
+	$("#"+id).append('<option value="">请选择</option><option value="3">用户违约</option><option value="4">4s店违约</option>');
+	$("#"+id).combobox({editable:false});
+}
+
+//订单状态格式化
+function fmtBreakStateSlc(value,row,index){
+	switch(value){
+		case "3":
+			return '<font color="red" >用户违约</font>';
+		case "4":
+			return '<font color="red" >4s店违约</font>';
+		default:
+			return "";
+	}
+}
+
+//牌照类型
+function fmtAskpLicenseTypeSlc(value,row,index){
+	switch(value){
+		case "1":
+			return "代办外牌";
+		case "2":
+			return "代办沪牌";
+		case "3":
+			return "代办沪C";
+		case "4":
+			return "自主办理沪类牌照";
+		default:
+			return "自主回原籍上牌";
+	}
+}
+
+
+//贷款状态
+function fmtAskpLoanSlc(value,row,index){
+	switch (value) {
+		case "1":
+			return "是";
+		case "0":
+			return "否";
+		default :
+			return "";
+	}
+}
+
+//置换状态
+function fmtAskpReplaceSlc(value,row,index){
+	switch (value) {
+		case "1":
+			return "是";
+		case "0":
+			return "否";
+		default :
+			return "";
+	}
+}
+//赠品分类
+function fmtGiftTypeSlc(value,row,index){
+	switch (value) {
+		case "1":
+			return "后市场产品";
+		case "2":
+			return "保养维修";
+		case "3":
+			return "其它产品";
+		default :
+			return "";
+	}
+}
+//赠品用途
+function fmtGiftUseSlc(value,row,index){
+	value=value.replace('1','赠送');
+	value=value.replace('2','自选');
+	value=value.replace('3','套餐');
+	return value;
+}
+
+//系统公告类型
+function fmtSysNoticeTypeSlc(value,row,index){
+	switch (value) {
+	case "1":
+		return "新增功能";
+	case "2":
+		return "活动预告";
+	case "3":
+		return "最新通知";
+	default :
+		return "";
+}
+	
+}
+
+function fmtSysnoticeIssmsSlc(value,row,index){
+	switch (value) {
+	case 0:
+		return "不发送";
+	case 1:
+		return "发送";
+	default :
+		return "";
+}
+
+}
+
+/**
+ * 用户级别
+ * @param value
+ * @param row
+ * @param index
+ * @return
+ */
+function fmtLevelSlc(value){
+	switch (value) {
+	case '还没定':
+		return "C";
+	case '半年内':
+		return "C";
+	case '三个月以后':
+		return "C";
+	case '三个月后':
+		return "C";
+	case '一个月内':
+		return "A";
+	case '三个月内':
+		return "B";
+	case '二周内':
+		return "H";
+	case '战败':
+		return "F";
+	case '成交':
+		return "O";
+	case '未知':
+		return "X";
+	default :
+		return "C";
+	}
+}
+
+function loadRespond(askpId){
+	$.getJSON("fsAskPrice.do",{"method":"getResponById","askpId":askpId},function(data){
+		if (null == data || "" == data) {
+//			$.messager.alert('提示消息','数据加载失败!','info');
+		} else {
+			if( data[0].dataState > 1){
+				$("a[name='searchA"+askpId+"']").hide();
+				$(".appoint"+askpId).hide();
+			}else{
+				//4S点状态是否托管否=0 ,是=1
+				if(data[2].fsIsauto == 0){
+					if(data[1].empPower == '1'){
+						$(".appoint").show();
+						$("a[name='searchA"+askpId+"']").show();
+					}else{
+						$(".appoint").hide();
+						if(data[0].respondUser == data[1].empId){
+							$("a[name='searchA"+askpId+"']").show();
+						}else{
+							$("a[name='searchA"+askpId+"']").hide();
+						}
+					}
+				}else{
+					if(data[1].empPower == '1'){
+						$(".appoint").show();
+						$("a[name='searchA"+askpId+"']").show();
+					}else{
+						if(data[0].respondUser == data[1].empId){
+							$("a[name='searchA"+askpId+"']").show();
+						}else if(data[0].respondUser == ''){
+							$("a[name='searchA"+askpId+"']").hide();
+						}else{
+							$("a[name='searchA"+askpId+"']").hide();
+						}
+						$(".appoint"+askpId).hide();
+					}
+				}
+			}
+		}
+	});
+}
+
+function fmtGradeTypeSlc(value,row,index){
+	value=parseInt(value);
+	switch (value) {
+		case 1:
+			return "询价";
+		case 2:
+			return "超时未报价";
+		case 3:
+			return "下订";
+		case 4:
+			return "获取联系方式";
+		case 5:
+			return "结算转化率";
+		default :
+			return "";
+	}
+}
+
+function setGradeTypeSlc(id){
+	$("#"+id).append('<option value="">请选择</option><option value="1">询价</option>	<option value="2">超时未报价</option>'+
+			'	<option value="3">下订</option><option value="4">获取联系方式</option><option value="5">结算转化率</option>');
+	$("#"+id).combobox({editable:false});
+}
+
+
+function fmtButtonSlc(value,row,index){
+	if("1"==row.dataState){
+		$("#IsShow").hide();
+		return '<a href="#" onclick="javascript:sign(\''+row.orderId+'\')" class="easyui-linkbutton l-btn" id="signButton" ><span class="l-btn-left"><span class="l-btn-text icon-pencil-black l-btn-icon-left">签  到</span></span></a>';
+	}else if("2"==row.dataState || "5"==row.dataState){
+		$("#IsShow").show();
+		return '<a href="#" onclick="javascript:lookDeatil(\''+row.orderId+'\')"><img src="../../resources/js/easyui-1.3.2/themes/icons/time_ok.png" alt="已签到" with/></a>';
+	}else{
+		$("#IsShow").hide();
+		return '<a href="#" onclick="javascript:lookDeatil(\''+row.orderId+'\')">查看详情</a>';
+	}
+}
+
+//将字符串转换成date格式数据
+function toDate(str){
+    var sd=str.split("-");
+    return new Date(sd[0],(sd[1]-1),sd[2]);
+}
+

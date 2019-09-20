@@ -1,0 +1,13 @@
+[t5]
+FileName1=t5.htm
+URL1=http://mps-test.haomaiche.com/fs/fs/fsEmploy.do?method=getLastOrder
+Total=2
+RequestHeaderFile=t5_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t5_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_5.xml
+FileName2=t5_favicon.ico
+URL2=http://www.bing.com/favicon.ico
+[ProtocolInfo]
+ProtocolId=QTWeb

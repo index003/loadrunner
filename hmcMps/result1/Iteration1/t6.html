@@ -1,0 +1,341 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+  
+     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+     <meta name="robots" content="none" />
+     <meta http-equiv="Expires" content="0">
+	 <meta http-equiv="Pragma" content="no-cache">
+	 <meta http-equiv="Cache-control" content="no-cache">
+	 <meta http-equiv="Cache" content="no-cache">
+     <title>4S店后台管理系统登录界面</title>
+     <link rel="stylesheet" type="text/css" href="../resources/js/easyui-1.3.2/themes/gray/easyui.css" />
+   	 <link rel="stylesheet" type="text/css" href="../resources/js/easyui-1.3.2/themes/icon.css" />
+	 <link rel="stylesheet" type="text/css" href="../resources/css/base.css" />
+     <script type="text/javascript" src="../resources/js/jquery-1.7.2.js"></script>
+	 <script type="text/javascript" src="../resources/js/jquery.easyui.min.js"></script>
+   	 <script type="text/javascript" src="../resources/js/easyui-1.3.2/locale/easyui-lang-zh_CN.js"></script>
+   	 <script type="text/javascript" src="../resources/js/jquery-capsLockTip.js"></script>
+     <script type="text/javascript" src="../resources/js/common.js"></script>
+ 	 <script type="text/javascript" src="fs/js/index.js?v=1.7"></script>
+ 	 <script type="text/javascript" src="../resources/js/jQuery-jcMarquee.js"></script>
+     <script type="text/javascript"></script>
+	 <style type="text/css">
+	 	*{ margin:0; padding:0; list-style:none; text-decoration:none;}
+		#editPassTable{line-height: 35px;}
+		table tr{line-height: 42px;}
+		#fsName{font-weight: normal;}
+		.number_span{color:red;}
+	    #fscon_one_c_1 { overflow:hidden; width:500px;margin-left:0px;text-align:center;} 
+        #fscon_one_c_1 ul li ,#fscon_one_c_1 ul li div{ float:left;} /* 横向滚动必须让所有li左浮动 */
+		.wx_fs_ad1{float:left;position:fixed;top:0;right:345px;z-index:100;cursor:pointer;width:446px}
+		.wx_fs_ad2{position:absolute;z-index:1;left:0;top:-154px}
+		.wx_fs_ad_box{width:386px;height:160px;overflow:hidden;position:absolute;z-index:2;left:33px;top:65px}
+		.first_menu{width:178px}
+		.first_menu ul li{height:27px;line-height:27px;font-weight:bold;background:#f3f3f3;border:1px solid #d3d3d3;border-bottom:0}
+		.first_menu ul li a{padding-left:21px;display:block;color:#575765}
+		.first_menu .menu_aed{color:#fff;background:#0092dc}
+	</style>
+	
+	
+	<script src="https://s13.cnzz.com/z_stat.php?id=1262932335&web_id=1262932335" language="JavaScript"></script>
+	<script type="text/javascript"> 
+	
+	if(navigator.appName == "Microsoft Internet Explorer"&&parseInt(navigator.appVersion.split(";")[1].replace(/[ ]/g, "").replace("MSIE",""))<=9){
+		if(confirm("您的浏览器版本过低，请升级IE10及以上版本")){  
+			window.location.href='http://rj.baidu.com/soft/detail/23360.html';
+         }
+	}
+	
+   // window.onbeforeunload = onbeforeunload_handler;   
+   // window.onunload = onunload_handler;   
+    function onbeforeunload_handler(){  
+    	$.getJSON("fs/fsEmploy.do",{"user":""},function(data){} );
+    }   
+    function onunload_handler(){  
+    	$.getJSON("fs/fsEmploy.do",{"user":""},function(data){} );
+    }  
+    $(function(){
+
+$(".wx_fs_ad1").mouseenter(function(){
+	$(".wx_fs_ad_box").show();
+	$(".wx_fs_ad2").animate({top:"0px"},function(){
+		$(".wx_fs_ad_box").show();
+	});
+}).mouseleave(function(){
+	$(".wx_fs_ad2").animate({top:"-154px"},function(){
+		$(".wx_fs_ad_box").hide();
+	});
+});
+
+$(".first_menu ul li a").click(function(){
+	$(".first_menu ul li a").removeClass("menu_aed");
+	$(this).addClass("menu_aed");
+});
+$(".tree-title a").click(function(){
+	$(".first_menu ul li a").removeClass("menu_aed");
+});
+
+        });  
+</script> 
+ 
+  </head>
+  
+ <body class="easyui-layout"  >
+ <!--
+ <div class="wx_fs_ad1">
+	<img src="../resources/images/fs_ad1.png" width="446" height="68"/>
+	<div class="wx_fs_ad_box">
+	<div class="wx_fs_ad2"><img src="../resources/images/fs_ad2.png" width="386" height="160"/></div>
+	</div>
+</div>
+--><input type="hidden" name="userId" id="userId" value="" />
+		<input type="hidden" name="empFs" id="empFs"/>
+		<input type="hidden" name="fsIssign" id="fsIssign"/>
+		
+		<!-- 页面顶部图片区 -->
+		<div region="north" split="false" style="height: 80px;background-color: #f2f2f2;">
+			<div style="vertical-align: middle; padding-top:20px; padding-left:43px; width:100px; float: left;height: 48px;">
+				<a href="/" target="_blank" ><img src="../resources/images/logo_1.png" alt="好买车" height="48"/></a>
+			</div>
+			<div style="float: left;padding-left:85px; padding-top:15px;">
+				<!--<h1><a href="#" id="ahref" target="_blank" style="text-decoration: none;color:#3b3a3b; font-size:16px; font-weight:normal;" ></a></h1>-->
+				<span id="fsName" style="font-size:18px; font-weight:bold;" ></span>
+				<span style="font-size:18px; font-weight:bold;">经销商后台管理系统</span>
+		  <div id="fscon_one_c_1">		
+			 <table cellspacing="0" cellpadding="0" align="center" border="0">
+				<tr>
+				<td id="topNotice" valign="top">
+					<table width="600" height="14" border="0" cellpadding="0" cellspacing="0">
+					<tr align="center" style="line-height: 14px;" id="td_content">
+					</tr>
+					</table>
+				</td>
+				<td id="topNotice2" valign="top"></td>
+				</tr>
+			</table>
+				</div>
+				<div id="weekRep">
+				</div>
+			</div>
+            <div style=" float:right;  text-align:right; padding-right:20px;">
+				<div style="padding-top:5px; line-height:24px; padding-right:15px;">
+                	<span id="nickName" ></span>(<span id="empPower" ></span>) ，积分： <span id="empGrade" ></span>
+                	<a style="color:green;"  href="javascript:void(0);" id="applyButton">兑换</a>&nbsp;<span id="dateTime" class="fhuang"></span>
+                	<input type="hidden" name="empCityCode" id="empCityCode" />
+				</div>
+				<div style="padding-top:2px;">
+					<span style="margin-left:5px;">
+						<a class="easyui-linkbutton"  icon="icon-login" href="javascript:void(0);" id="editLogin">修改密码</a>
+					</span>
+					<span style="margin-left:5px;">
+						<a class="easyui-linkbutton"  icon="icon-exit" href="javascript:void(0);" id="logOut">退出系统</a>
+					</span>
+				</div>
+			</div>
+			
+		</div>
+		
+		<!-- 首页左侧功能区 -->
+		<div region="west" id="htop" title="功能列表" split="true" style="width: 180px; padding: 1px;">
+		<div class="first_menu">
+		 <ul>
+		 <li iconCls="none" id="saleCount" style="display:none;">
+			 	<span><a href="fs/fsRepot.html" target="webPlatformDataGridIframe">销售数据统计</a></span>
+			</li>
+		  <li iconCls="none">
+		 <span><a href="fs/fsAskPrice.html" target="webPlatformDataGridIframe">请报价
+		 <span class="number_span" id="asknum_span"></span></a></span>
+		</li>
+		<li style="border-bottom: 0px;">
+		<span><a href="fs/fsOfflineOrderList.html" target="webPlatformDataGridIframe">已成交订单</a></span>
+		</li>  
+		 </ul>
+		</div>
+			<div class="easyui-accordion" fit="false" id="left_menu" style="width: 180px;border-bottom: none;">
+				<div title="销售信息管理" iconCls="icon-setSchedule" id="orderManage" selected="true" style="overflow: auto; padding: 10px;">
+					<ul class="easyui-tree">
+						<li id="fsAskpriceWait">
+								<span><a href="fs/fsAskpriceWait.html" target="webPlatformDataGridIframe">询价单总览</a></span>
+					    </li>
+					    <!--<li>-->
+								<!--<span><a href="fs/fsGetInfo.html" target="webPlatformDataGridIframe">销售线索（H+）</a></span>-->
+							<!--</li>-->
+							<li id="fsRespondClueB">
+								<span><a href="fs/fsRespondClueB.html" target="webPlatformDataGridIframe" id="respondClueLink">报价线索
+								<span class="number_span" id="waitResNum_span"></span></a></span>
+							</li>
+							<li  id="fsCallClue">
+								<span><a href="fs/fsCallClue.html" target="webPlatformDataGridIframe">活动线索
+								<span class="number_span" id="callClueNum_span"></span></a></span>
+							</li>
+							<li  id="fsPrivacyCallClue">
+								<span><a href="fs/fsPrivacyCallClue.html" target="webPlatformDataGridIframe">来电线索</a></span>
+							</li>
+							 <li id="fsRespondSecondClue">
+								<span><a href="fs/fsRespondSecondClue.html" target="webPlatformDataGridIframe">分配线索</a></span>
+							</li>
+						<!--<li>
+								<span><a href="fs/webSpcOrder.html" target="webPlatformDataGridIframe">特价车线索</a></span>
+							</li>
+							<li>
+								<span><a href="car/fsCarSpecialList.html" target="webPlatformDataGridIframe">特价车管理</a></span>
+							</li>-->
+							<li id='fsDesc'>
+								<span><a href="fs/fsDesc.html" target="webPlatformDataGridIframe">备注管理</a></span>
+							</li>
+							<li id="fsGift">
+								<span><a href="fs/fsGift.html" target="webPlatformDataGridIframe">赠品管理</a></span>
+							</li>
+							<li id="fsPackage">
+								<span><a href="fs/fsPackage.html" target="webPlatformDataGridIframe">捆绑套餐管理</a></span>
+							</li>
+							<!--<li id="autoRespondConfig" >-->
+								<!--<span><a href="fs/autoRespondConfig.html" target="webPlatformDataGridIframe">自动报价设置</a></span>-->
+							<!--</li>-->
+							
+							<!-- <li>
+								<span><a href="fs/fsRespondList.html" target="webPlatformDataGridIframe">待审核
+								<span class="number_span" id="respondnum_span"></span></a></span>
+							</li> -->
+							<!-- <li>
+								<span><a href="fs/fsWaitUser.html" target="webPlatformDataGridIframe">待用户确认
+								<span class="number_span" id="waitnum_span"></span></a></span>
+							</li> -->
+							
+							<!-- <li>
+								<span><a href="fs/fsContact.html" target="webPlatformDataGridIframe">已联系</a></span>
+							</li> -->
+							
+							<!-- <li>
+								<span><a href="fs/fsOrder.html" target="webPlatformDataGridIframe">已下订
+								<span class="number_span" id="ordernum_span"></span>
+								</a></span>
+							</li> -->
+							
+							<!-- <li>
+								<span><a href="fs/fsBreak.html" target="webPlatformDataGridIframe">已违约</a></span>
+							</li> -->
+							
+							<!-- <li>
+								<span><a href="fs/fsGetInfo.html" target="webPlatformDataGridIframe">已获取询价单联系方式</a></span>
+							</li>
+							<li>
+								<span><a href="fs/fsSpcGetInfo.html" target="webPlatformDataGridIframe">已获取特价车联系方式</a></span>
+							</li> -->
+						</ul>
+				</div>
+			
+				<div title="基础信息管理" iconCls="icon-setSchedule" id="baseInfoManage" style="overflow: auto; padding: 10px;">
+					<ul class="easyui-tree">
+							<!--<li>
+								<span><a href="fs/fsInfo.html" target="webPlatformDataGridIframe">4S店信息管理</a></span>
+							</li>-->
+							
+							<li>
+								<span><a href="fs/fsEmploy.html" target="webPlatformDataGridIframe">人员信息管理</a></span>
+							</li>
+<!--							<li >-->
+<!--								<span><a href="fs/fsCommment.html" target="webPlatformDataGridIframe">客户点评</a></span>-->
+<!--							</li>-->
+<!--							-->
+<!--							<li >-->
+<!--								<span><a href="fs/getUserInfoRecord.html" target="webPlatformDataGridIframe">获取信息记录</a></span>-->
+<!--							</li>-->
+					</ul>
+				</div>
+				
+<!--				<div title="信息管理" iconCls="icon-setSchedule" id="infoManage"  style="overflow: auto; padding: 10px;">-->
+<!--					<ul class="easyui-tree">-->
+<!--							-->
+<!--							<li >-->
+<!--								<span><a href="fs/orderRecord.html" target="webPlatformDataGridIframe">成交记录</a></span>-->
+<!--							</li>-->
+<!--							<li >-->
+<!--								<span><a href="fs/askPriceRecord.html" target="webPlatformDataGridIframe">询价记录</a></span>-->
+<!--							</li>-->
+<!--					</ul>-->
+<!--				</div>-->
+
+			<div title="数据统计" iconCls="icon-setSchedule" id="carUsedManage" style="overflow: auto; padding: 10px;display: none;">
+				<ul class="easyui-tree">
+					<li iconCls="none" id="saleCount" style="display:none;">
+						<span>
+							<a href="fs/fsRepot.html" target="webPlatformDataGridIframe">销售数据统计</a>
+						</span>
+					</li>
+				</ul>
+			</div>
+
+			</div>
+			<div class="first_menu">
+			  <ul>
+			     <li style="border-top:none;">
+				  <span><a href="fs/fsEmployApply.html" target="webPlatformDataGridIframe">积分兑换</a></span>
+				</li>
+				<li style="display: none;">
+					<span><a href="fs/sysNotice.html" target="webPlatformDataGridIframe">系统通知</a></span>
+				</li>
+			  </ul>
+			
+			</div>
+		</div>
+		
+		<!-- 页面主工作区 -->
+		<div region="center">
+			<iframe name="webPlatformDataGridIframe" id="webPlatformDataGridIframe" width="100%" height="100%" src="fs/fsAskPrice.html" frameborder="no" border="0">
+			
+			</iframe>
+		</div>
+		
+		<!-- 页面底部版权区 -->
+		<div region="south" split="false" class="footStyle" style="height: 30px; padding: 5px; text-align: center;background-color: #ECF2FB;">
+			<span id="footText"></span> &nbsp;
+			<span>技术支持：上海轩言网络信息科技有限公司</span><span style="padding-left:20px;">客服电话：<font color="red">400-879-8779</font>&nbsp;&nbsp;如有车型变动，请及时通知我们</span>
+		</div>
+		
+		
+		
+		
+		<!-- 修改密码 -->
+		<div id="editPass" class="easyui-dialog" title="修改密码" style="padding:10px;">
+			<form action="#" id="pwdForm">
+			<table cellpadding="0" cellspacing="0"  width="100%" id="editPassTable" >
+				<tbody>
+					<tr>
+						<td width="30%" align="right" style="font-size: 12px">
+							旧密码：
+						</td>
+						<td align="left">
+							<input size="22" type="password" name="oldPwd" 
+								id="oldPwd" maxlength="50" data-options="required:true" />
+						</td>
+					</tr>
+					<tr>
+						<td width="30%" align="right" style="font-size: 12px">
+							新密码：
+						</td>
+						<td align="left">
+							<input size="22" type="password" name="pwd" 
+								id="pwd" maxlength="50" data-options="required:true" />
+						</td>
+					</tr>
+					<tr>
+						<td width="20%" align="right" style="font-size: 12px">
+							新确认密码：
+						</td>
+						<td align="left">
+							<input size="22" type="password" name="pwd1" 
+								id="pwd1" maxlength="50" data-options="required:true" />
+						</td>
+					</tr>
+				</tbody>
+
+			</table>
+		</form>
+		</div>
+		
+	</body>
+	
+
+</html>

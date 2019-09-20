@@ -1,0 +1,9 @@
+GET /stat.htm?id=1262932335&r=&lg=zh-cn&ntime=none&cnzz_eid=438912350-1568886028-&showp=1920x1080&p=http%3A%2F%2Fmps-test.haomaiche.com%2Ffs%2Findex.html&t=4S%E5%BA%97%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E7%99%BB%E5%BD%95%E7%95%8C%E9%9D%A2&umuuid=16d492b3fd41bf-09b093332a586-26596859-1fa400-16d492b3fd51ca&h=1&rnd=668763734 HTTP/1.1
+Accept: */*
+Accept-Language: zh-CN
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)
+Accept-Encoding: gzip, deflate
+Host: z7.cnzz.com
+Connection: Keep-Alive
+Referer: http://mps-test.haomaiche.com/fs/index.html
+

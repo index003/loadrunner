@@ -67,11 +67,25 @@ Action()
 
  		while(1)
  		{
- 			if(arrivecity==departcity)
- 				arrivecity = lr_paramarr_random("flights");
- 			else
+ 			int result = strcmp(arrivecity,departcity);
+ 			
+ 			if(result>0)
  				break;
+ 			else if(result<0)
+ 				break;
+ 			else
+ 				arrivecity = lr_paramarr_random("flights");
  		}
+ 		
+ 		
+// 		while(1){
+// 		
+// 			if(arrivecity==departcity)
+// 				arrivecity = lr_paramarr_random("flights");
+// 			else
+// 				breank;
+// 		}
+
 
  	lr_output_message("departcity=%s",departcity);
  	lr_output_message("arrivecity=%s",arrivecity);

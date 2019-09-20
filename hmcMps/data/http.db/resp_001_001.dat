@@ -1,0 +1,138 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="pragma" content="no-cache" />
+		<meta http-equiv="cache-control" content="no-cache" />
+		<meta http-equiv="expires" content="0" />
+		<meta name="robots" content="none" />
+		<title>好买车商户后台管理系统</title>
+		<script type="text/javascript" src="../resources/js/jquery-1.8.0.min.js"></script>
+		<script type="text/javascript">
+			if(window.top.location!=window.location){
+				window.top.location=window.location
+			}
+		</script>
+		<link rel="stylesheet" type="text/css" href="../resources/js/easyui-1.3.2/themes/default/easyui.css" />
+    	<link rel="stylesheet" type="text/css" href="../resources/js/easyui-1.3.2/themes/icon.css" />
+		<link rel="stylesheet" type="text/css" href="../resources/css/base.css" />
+		<script type="text/javascript" src="../resources/js/jquery.easyui.min.js"></script>
+    	<script type="text/javascript" src="../resources/js/easyui-1.3.2/locale/easyui-lang-zh_CN.js"></script>
+		<script type="text/javascript" src="../resources/js/jquery-capsLockTip.js"></script>
+		<script type="text/javascript" src="fs/js/mobileLogin.js?v=1.3"></script>
+		<style type="text/css">
+		    html{background-repeat: no-repeat;background-color: #f2f2f2;background-position:100% 100%; height:100%; }
+			.login{ padding-top:60px;  width:600px; margin:0 auto;text-align:center}
+			.login h1{ font-size:20px; font-family:"微软雅黑"; font-weight:bold; text-align:center; line-height:100px;}
+			.login_username{ width:180px; height:24px; line-height:24px; padding:0 25px 0 5px; background:url(../resources/images/lock_bg1.jpg) 230px center no-repeat #fff; border:1px solid #bababa;}
+			.login_table{ border-collapse:collapse;margin-left: 55px;}
+			.login_table td{ padding:8px 0;font-size:14px;}
+			
+			.sumbit{ text-align:center; padding-top:5px;margin-left: -15px}
+			.sumbit a{ margin:0 10px;}
+			
+			.phone{ width:100%; text-align:center; bottom:10px; padding:10px 0;}
+			.phone p{ line-height:28px; font-family:"微软雅黑"; color:#3b3a3b;}
+			
+			.caps{display: none;}
+			.sm_code_cls{}
+			.error{margin-left:-60px;}
+			
+		   .sm_code_cls{width:80px;height:18px;line-height:18px;-moz-box-shadow:inset 0 1px 0 0 #fff;-webkit-box-shadow:inset 0 1px 0 0 #fff;box-shadow:inset 0 1px 0 0 #fff;background:-webkit-gradient(linear,left top,left bottom,color-stop(.05,#f9f9f9),color-stop(1,#e9e9e9));background:-moz-linear-gradient(top,#f9f9f9 5%,#e9e9e9 100%);background:-webkit-linear-gradient(top,#f9f9f9 5%,#e9e9e9 100%);background:-o-linear-gradient(top,#f9f9f9 5%,#e9e9e9 100%);background:-ms-linear-gradient(top,#f9f9f9 5%,#e9e9e9 100%);background:linear-gradient(to bottom,#f9f9f9 5%,#e9e9e9 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#e9e9e9', GradientType=0);background-color:#f9f9f9;-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;border:1px solid #dcdcdc;display:inline-block;cursor:pointer;color:#666;font-family:Arial;font-size:15px;font-weight:700;padding:6px 24px;text-decoration:none;text-shadow:0 1px 0 #fff}
+		   .sm_code_cls:hover{background:-webkit-gradient(linear,left top,left bottom,color-stop(.05,#e9e9e9),color-stop(1,#f9f9f9));background:-moz-linear-gradient(top,#e9e9e9 5%,#f9f9f9 100%);background:-webkit-linear-gradient(top,#e9e9e9 5%,#f9f9f9 100%);background:-o-linear-gradient(top,#e9e9e9 5%,#f9f9f9 100%);background:-ms-linear-gradient(top,#e9e9e9 5%,#f9f9f9 100%);background:linear-gradient(to bottom,#e9e9e9 5%,#f9f9f9 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9e9e9', endColorstr='#f9f9f9', GradientType=0);background-color:#e9e9e9}
+		   .sm_code_cls:active{position:relative;top:1px}
+		   
+		   
+		   .confirm_btn{width:40px;height:18px;line-height:18px;-moz-box-shadow:inset 0 1px 0 0 #fff;-webkit-box-shadow:inset 0 1px 0 0 #fff;box-shadow:inset 0 1px 0 0 #fff;background:-webkit-gradient(linear,left top,left bottom,color-stop(.05,#f9f9f9),color-stop(1,#e9e9e9));background:-moz-linear-gradient(top,#f9f9f9 5%,#e9e9e9 100%);background:-webkit-linear-gradient(top,#f9f9f9 5%,#e9e9e9 100%);background:-o-linear-gradient(top,#f9f9f9 5%,#e9e9e9 100%);background:-ms-linear-gradient(top,#f9f9f9 5%,#e9e9e9 100%);background:linear-gradient(to bottom,#f9f9f9 5%,#e9e9e9 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#e9e9e9', GradientType=0);background-color:#f9f9f9;-moz-border-radius:6px;-webkit-border-radius:15px;border-radius:15px;border:1px solid #dcdcdc;display:inline-block;cursor:pointer;color:#666;font-family:Arial;font-size:12px;font-weight:700;padding:6px 24px;text-decoration:none;text-shadow:0 1px 0 #fff}
+		   .confirm_btn:hover{background:-webkit-gradient(linear,left top,left bottom,color-stop(.05,#e9e9e9),color-stop(1,#f9f9f9));background:-moz-linear-gradient(top,#e9e9e9 5%,#f9f9f9 100%);background:-webkit-linear-gradient(top,#e9e9e9 5%,#f9f9f9 100%);background:-o-linear-gradient(top,#e9e9e9 5%,#f9f9f9 100%);background:-ms-linear-gradient(top,#e9e9e9 5%,#f9f9f9 100%);background:linear-gradient(to bottom,#e9e9e9 5%,#f9f9f9 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9e9e9', endColorstr='#f9f9f9', GradientType=0);background-color:#e9e9e9}
+		   .confirm_btn:active{position:relative;top:1px}
+		   
+		   .hd,.ep_hd,.p_hd,.c_hd{display: none;}
+		   .login_btn{display: none;}
+	 --></style>
+	</head>
+
+	<body>
+	<div class="outer-login">
+		<form id="form" method="post">
+			<div class="login">
+				<h1>好买车商户后台管理系统</h1>
+				<table cellpadding="0" cellspacing="0" border="0" width="100%" class="login_table">
+					<tr>
+						<td colspan="2">
+							<div class="error" id="msgId" class="hd">
+								<span style="color:red"></span>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td style="width:130px" align="right">手机号码/账号：</td>
+						<td style="text-align: left;padding-left:5px;">
+						    <input class="easyui-validatebox login_username" type="text" id="userPhone" name="userPhone"  value='' placeholder="请输入手机号码或者登录账号"/>
+						    <input type="hidden" name="empPhone" id="empPhone" />
+						    <span class="red"></span> 
+						    <span class="green"></span>
+						</td>
+					</tr>
+					<tr class="ep_hd">
+						<td></td>
+						<td  align="left" style="padding-left:5px;">
+							已绑定手机号：<span id="ephone"></span>，
+							<a href="javascript:alert('请联系BD人员或者客服：400-879-8779');">这不是我的手机号码</a>
+						</td>
+					</tr>
+					<tr class="p_hd">
+						<td align="right">验证码：</td>
+						<td style="text-align: left;padding-left:5px;">
+						    <input class="easyui-validatebox login_username" type="text" id="smCode" name="smCode"  value='' placeholder="验证码"/>
+						     <a href="javascript:void(0)" class="sm_code_cls" id="smCodebtn">获取验证码</a>
+						     <span class="red"></span> 
+						     <span class="green"></span>
+						</td>
+					</tr>
+					<tr class="c_hd">
+						<td></td>
+						<td  align="left" style="padding-left:5px; ">
+							收不到短信验证码？试试
+							<a href="javascript:void(0);" class="voiceCode">获取语音验证码</a>
+						</td>
+					</tr>
+				</table>
+				<p class="sumbit">
+				    <a href="javascript:void(0)" class="confirm_btn">确认</a>  &nbsp;&nbsp;
+					<a href="javascript:void(0)" class="login_btn" id="submit"><img src="../resources/images/admin/login.png" /></a> 
+					<a href="javascript:void(0)" class="login_btn" id="clear"><img src="../resources/images/admin/reset.png" /></a>
+				</p>
+			</div>
+			<input type="hidden" id="token" name="token" value="" />
+			
+			
+			<div style="margin-top: 20px;display: none;">
+			 <fieldset style="height: 120px;width: 520px; margin: 0 auto;padding:20px;　overflow: hidden;">
+			   <legend style="text-align: center;font-size: 16px;font-weight: bold;color: #3170b8">　　合作4S店最新成交　　</legend>
+			 
+			 <table class="fs_login_table" id="scroller" style="clear: both;">
+			  
+			 </table>
+			 </fieldset>
+			</div>
+			
+			
+			<div class="phone">
+				<div><img src="../resources/images/admin/logo_1.png"  /></div>
+			    <p>商户服务：400-879-8779</p>
+			    <div style="width: 300px;margin: 0 auto;">
+			    <div style="width: 140px;float: left;text-align: center;">
+			    	<a class="appDownload" title="IOS 商户端App点击下载安装" href="../h5/ios_download.html" >IOS 商户端App点击下载安装</a>
+			    	<p><img src="../resources/images/admin/IOS_dealer_110.png" width="110" /></p>
+			    </div>
+			    
+			    <div style="width: 140px;float: right;text-align: center;">
+			    	<a class="appDownload" title="Android 商户端App点击下载安装" href="../h5/Android_dealer_download.html">Android 商户端App点击下载安装</a>	
+			    	<p><img src="../resources/images/admin/android_dealer_110.png"  /></p>
+			    </div>
+			    </div>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

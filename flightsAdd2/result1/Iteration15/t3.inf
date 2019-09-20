@@ -1,0 +1,17 @@
+[t3]
+URL3=http://127.0.0.1:1080/cgi-bin/reservations.pl?page=welcome
+SnapshotXmlFile=snapshot_3.xml
+ContentType=text/html
+StepName=Image: Search Flights Button
+Total=3
+FileName1=t3.html
+FileName3=t3f1.html
+FileName2=t3f0.html
+RequestHeaderFile=t3_RequestHeader.txt
+UseFrameIndex=1
+ResponseHeaderFile=t3_ResponseHeader.txt
+FrameIndex2=0.0
+FrameIndex3=0.1
+RequestBodyFile=t3_RequestBody.txt
+URL1=http://127.0.0.1:1080/cgi-bin/welcome.pl?page=search
+URL2=http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=flights

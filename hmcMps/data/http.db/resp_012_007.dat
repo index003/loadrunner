@@ -1,0 +1,293 @@
+var timer = null;
+var isOnePower=false;
+var count;//查询fs_get_info的count值
+var count1;//根据当前用户的emp_id,查询fs_get_user的count1值
+var empCityCode;//登陆员工cityCode
+var respondFlag=false;
+$(document).ready(function(){
+	loadUserData();
+	//退出登录
+	$("#logOut").bind('click',function(){
+		if(confirm("确认退出登录？")){
+			window.top.location = "fs/fsEmploy.do?method=logout";
+		}
+	});
+	$("#ahref").click(function(){
+		$(this).attr("href",sysUrl+"/fsInfo/"+$("#empFs").val());
+	});
+	
+	$('#editPass').dialog({
+		 width:450, 
+		 height:220, 
+		 iconCls:'icon-save',
+		 closed: true,  
+	     modal:true,
+	     resizable:true,
+	     buttons:[{
+			text:'提交',
+			iconCls:'icon-ok',
+			handler:function(){
+				submitPwdData();
+			}
+		},{ 
+			text:'返回',
+			iconCls:'icon-no',
+			handler:function(){
+				$('#editPass').dialog('close');
+			}
+		}],
+		onOpen:function() {
+			$('#form').form('reset');
+		}
+	});
+	
+	//修改密码
+	$("#editLogin").bind('click',function(){
+		$('#editPass').dialog('open');
+	});
+	
+	$("#oldPwd,#pwd,#pwd1").keydown(function(){
+		$(this).capsLockTip();
+	});
+	
+	
+	$("#applyButton").click(function(){
+		if(confirm("确认申请兑换？")){
+			$.ajax({
+			 	type:'post',
+				url:'fs/fsEmploy.do',
+				async: false,
+				data:'method=applyGrade',
+				success:function(data){
+			 		data = eval('(' + data + ')'); 
+			 		if(data!=null&&data.flag){
+			 			 $.messager.alert('提示消息',data.msg,'info');
+			 		}else{
+			 			 $.messager.alert('提示消息',data.msg,'info');
+			 		}
+		 		}
+			});
+		}
+	});
+	
+	//定时轮询，查询当前登录用户是否拥有未处理的单据(待报价和待审核),如果有给以提示（标题闪动、页头部走马灯）
+	checkIfHaveWaitProcessTask();
+	setInterval("checkIfHaveWaitProcessTask()",2 * 60 * 1000);
+});
+
+function checkIfHaveWaitProcessTask() {
+	
+	$.getJSON("fs/fsRespond.do",{"method":"getWaitProcessTaskInfo"},function(data){
+		if (data){
+			var askCount=data.askCount;
+			var waitRespCount=data.waitRespCount;
+			var callClueCount = data.callClueCount;
+			var mainRespondCount=data.mainRespondCount;
+			
+			var asknum_span=$("#asknum_span");
+			var waitResNum_span=$("#waitResNum_span");
+			var callClueNum_span=$("#callClueNum_span");
+
+			
+			if(waitRespCount&&waitRespCount>0){
+				waitResNum_span.html("("+waitRespCount+")")
+			}else{
+				waitResNum_span.html("");
+			}
+			
+			if(askCount&&askCount>0){
+				asknum_span.html("（"+askCount+"）")
+			}else{
+				asknum_span.html("");
+			}
+
+			if(callClueCount&&callClueCount>0){
+                callClueNum_span.html("("+callClueCount+")")
+			}else {
+                callClueNum_span.html("");
+			}
+			
+			if(mainRespondCount!=null){
+				if(!respondFlag&&parseInt(mainRespondCount,10) <= 0){
+					respondFlag=true;
+					$.messager.alert('提示消息','请先设置主报账号，否则无法接收报价和线索！','info');
+					 $('#webPlatformDataGridIframe').attr('src','fs/fsEmploy.html');
+				}
+			}
+			
+		} 
+	});
+	
+	
+	
+}
+
+
+
+function submitPwdData(){
+	var oldPwd=$("#oldPwd").val();
+	var pwd=$("#pwd").val();
+	var pwd1=$("#pwd1").val();
+	if(oldPwd==null||""==$.trim(oldPwd)){
+		$.messager.alert('提示','旧密码不能为空!','warning');
+		return;
+	}
+	if(pwd==null||""==$.trim(pwd)){
+		$.messager.alert('提示','新密码不能为空！','warning');
+		return;
+	}
+	if(pwd1==null||""==$.trim(pwd1)){
+		$.messager.alert('提示','确认密码不能为空！','warning');
+		return;
+	}
+	if(pwd!=pwd1){
+		$.messager.alert('提示','输入2次密码不一致！','warning');
+		return;
+	}
+	$.post("fs/fsEmploy.do?method=modifyPwd",{"pwd":pwd,"oldPass":oldPwd},function(data){
+		data=eval("("+data+")")
+		if(null != data && '' != data){
+			if(data.flag){
+				  $.messager.alert('提示',data.msg,'info');
+				  $('#editPass').dialog('close');
+				  window.top.location = "fs/fsEmploy.do?method=logout";
+			}else{
+				  $.messager.alert('提示消息',data.msg,'warning');
+			}
+		}
+	});
+}
+
+
+function loadUserData(){
+	$.getJSON("fs/fsEmploy.do",{"method":"getCurUser"},function(data){
+		if (null == data || "" == data) {
+			$.messager.alert('提示消息','数据加载失败!','warning');
+			window.top.location="login.html";
+		} else {
+			//if(data.version!=null && data.version=='B'){
+			// 	$("#respondClueLink").attr("href","fs/fsRespondClueB.html");
+				if(data.empPower == '1' || data.empPower == '3'){
+					$("#saleCount").show();
+				}
+			//}
+			
+			$("#dateTime").html(data.time);
+			if(data.empFs!=null && data.empFs!=""){
+				$("#empFs").val(data.empFs);
+			}
+			
+			$("#empCityCode").val(data.empCityCode);
+			empCityCode = data.empCityCode;
+			
+			if(data.fsAbbrname!=null && data.fsAbbrname!=""){
+				if(data.fsIssign!=null&&data.fsIssign=='1'){
+					$("#fsName").html('<a href="../dealer/'+data.empFs+'.html" target="_blank">'+data.fsAbbrname+'<span style="color:green;">（已签约）</span></a>');
+				}else{
+					$("#fsName").html('<a href="../dealer/'+data.empFs+'.html" target="_blank">'+data.fsAbbrname+'</a>');
+					$("#applyButton").hide();
+				}
+				
+			}
+			var html="";
+			
+			if(data.empName!=null && data.empName!=""){
+				$("#nickName").html(data.empName+html);
+			}else{
+				$("#nickName").html(data.empUser+html);
+			}
+			$("#empGrade").html((data.empGrade-data.empDrawgrade)+'/'+data.empGrade);
+			empPower(data.empPower);
+			if(data.empPower == '1'){
+				isOnePower=true;
+				$("#carUsedManage").hide();
+//				$("#left_menu").find(".panel:eq(1)").hide();
+				$("#left_menu").find(".panel:eq(2)").hide();
+			}else if(data.empPower == '2'){
+				$("div[node-id=autoRespondConfig]").hide();
+				$("#carUsedManage").hide();
+				$("#left_menu").find(".panel:eq(1)").hide();
+				$("#baseInfoManage").hide();
+				$("#left_menu").find(".panel:eq(2)").hide();
+				$("#appointButton").remove();
+			}else if(data.empPower == '3' ){
+					$("div[node-id=autoRespondConfig]").hide();
+					$("#appointButton").remove();
+					$("#carUsedManage").show();
+					$("#baseInfoManage").hide();
+					$(".first_menu").hide();
+					$("#left_menu").find(".panel:eq(1)").hide();
+					$("#infoManage").hide();
+					$("#left_menu").find(".panel:eq(0)").show();
+					$("#orderManage").show();
+					$("div[node-id=fsAskpriceWait]").hide();
+					$("div[node-id=fsRespondSecondClue]").hide();
+					$("div[node-id=fsDesc]").hide();
+					$("div[node-id=fsGift]").hide();
+					$("div[node-id=fsPackage]").hide();
+					$('#webPlatformDataGridIframe').attr('src','model.html');
+			}else if(data.empPower == '4' ){
+				$("div[node-id=autoRespondConfig]").hide();
+				$("#appointButton").remove();
+				$("#carUsedManage").show();
+				$("#baseInfoManage").hide();
+				$(".first_menu").hide();
+				$("#left_menu").find(".panel:eq(1)").hide();
+				$("#infoManage").hide();
+				$("#left_menu").find(".panel:eq(0)").hide();
+				$("#orderManage").hide();
+		}
+		}
+	});
+}
+
+function empPower(powerId){
+	if("1"==powerId){
+		$("#empPower").html("一级权限");
+		weekReport();
+	}else if("2"==powerId){
+		$("#empPower").html("二级权限");
+	}else if("4"==powerId){
+		$("#empPower").html("集团权限");
+	}else{
+		$("#empPower").html("三级权限");
+	}
+}
+//
+function Marquee(){
+	if(fscon_one_c_1.scrollLeft>=topNotice.scrollWidth){
+	fscon_one_c_1.scrollLeft=0;
+	}
+	else{
+	fscon_one_c_1.scrollLeft++;
+	}
+	}
+
+function marquee(){
+	$.getJSON("/fs/fs/sysNotice.do",{"method":"getIndexNotice"},function(data){
+		if(data!=null&&data.length!=0){
+			for(d in data){
+				var text =data[d].noticeContent;
+				var contnet='<td align="center" style="word-break: keep-all;white-space:nowrap; padding-right:20px;"><a style="color:red;font-size: 14px;" href="fs/sysNotice.html" target="webPlatformDataGridIframe">'+text+'</a></td>';
+				$("#td_content").append(contnet);
+			}	
+		}
+		var speed=40;
+		$("#topNotice2").html($("#topNotice").html());
+		var MyMar=setInterval(Marquee,speed);
+		$("#fscon_one_c_1").onmouseover=function(){clearInterval(MyMar);}
+		$("#fscon_one_c_1").onmouseout=function(){MyMar=setInterval(Marquee,speed);}
+
+	});
+}
+//marquee();
+
+
+function weekReport(){
+	$.getJSON("/fs/fs/sysNotice.do",{"method":"weekReport"},function(data){
+		if (data){
+			var con='本周询价：'+data.askNum+'  未报价：'+data.noRepNum+'  报价率：'+data.repRatio+'%（'+data.repRatioDes+'）  销售线索：'+data.salesLeads+'条  已处理：'+data.fsGetUserNum+'条';
+			$("#weekRep").html(con);
+		}
+	});
+}

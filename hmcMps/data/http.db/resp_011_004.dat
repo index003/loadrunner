@@ -1,0 +1,18 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>系统提示-404</title>
+<style type="text/css">
+.return{text-align:center;margin:50px auto;}
+</style>
+</head>
+
+<body>
+<div  class="return">
+<img src="/resources/images/logo_1.png" alt="好买车" height="48" width="159" />
+<h2>您访问的地址不存在，请确认您输入的URL地址</h2>
+<a href="/">返回首页</a>
+</div>
+</body>
+</html>
